@@ -7,6 +7,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import com.android.androiddevteam.quest.R;
+import com.android.androiddevteam.quest.activity.MainActivity;
 
 /**
  * Project: Quest
@@ -66,5 +68,29 @@ public abstract class FragBaseAbstract extends Fragment{
         customizeViews(rootView);
 
         return rootView;
+    }
+
+    /**
+     * Replace current fragment in container by new fragment.
+     * @param fragment New fragment.
+     */
+    protected void replaceFragmentBackStack(FragBaseAbstract fragment) {
+        getFragmentManager()
+                .beginTransaction()
+                .replace(R.id.swipe_refresh_new_quest/*MainActivity.FRAGMENT_CONTAINER_ID*/, fragment)
+                .addToBackStack(fragment.getFragmentTag())
+                .commit();
+    }
+
+    /**
+     * Replace current fragment in container by new fragment.
+     * @param fragment New fragment.
+     */
+    protected void replaceFragmentBackStack(FragBaseAbstract fragment, int containerId) {
+        getFragmentManager()
+                .beginTransaction()
+                .replace(containerId, fragment)
+                .addToBackStack(fragment.getFragmentTag())
+                .commit();
     }
 }

@@ -8,7 +8,8 @@ import com.android.androiddevteam.quest.fragment.quest_list.FragAllQuests;
 
 public class MainActivity extends FragmentActivity {
 
-    private static final int FRAGMENT_CONTAINER_ID = R.id.frag_container;
+    public static final int FRAGMENT_CONTAINER_ID = R.id.frag_container;
+    public static final int CONTENT_VIEW_ID = R.layout.act_main;
 
     /**
      * Called when the activity is first created.
@@ -16,7 +17,7 @@ public class MainActivity extends FragmentActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+        setContentView(CONTENT_VIEW_ID);
 
         replaceFragmentBackStack(new FragAllQuests());
     }

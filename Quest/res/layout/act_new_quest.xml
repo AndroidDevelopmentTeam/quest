@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/swipe_refresh_new_quest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent">
+
+            <fragment
+                    android:id="@+id/google_map"
+                    android:name="com.google.android.gms.maps.MapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="false"
+                    android:layout_alignParentLeft="false"
+                    android:layout_alignParentRight="false"
+                    android:layout_alignParentTop="false"
+                    class="com.google.android.gms.maps.MapFragment" />
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editText_new_quest_search"
+                    android:layout_marginLeft="@dimen/marginPadding"
+                    android:layout_marginTop="@dimen/marginPadding"
+                    android:layout_marginRight="@dimen/marginPadding"
+                    android:drawableRight="@drawable/ic_action_search" android:hint="Search"
+                    android:background="@android:color/white" android:paddingLeft="@dimen/marginPadding"
+                    android:paddingRight="@dimen/marginPadding" android:layout_marginBottom="@dimen/marginPadding"
+                    android:focusable="false"/>
+            <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageButton_new_quest_curr_loc"
+                    android:layout_alignParentBottom="false"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/marginPadding"
+                    android:layout_marginBottom="@dimen/marginPadding"
+                    android:background="@drawable/selector_switch_thumb"
+                    android:src="@drawable/ic_action_location_found" android:layout_below="@+id/editText_new_quest_search"/>
+                <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content"
+                             android:id="@+id/imageButton_new_quest_switch_map" android:layout_alignParentBottom="false"
+                             android:layout_alignParentRight="true" android:layout_marginRight="@dimen/marginPadding"
+                             android:layout_marginBottom="@dimen/marginPadding"
+                             android:background="@drawable/selector_switch_thumb"
+                             android:layout_below="@+id/imageButton_new_quest_curr_loc"/>
+        </RelativeLayout>
+</android.support.v4.widget.SwipeRefreshLayout>

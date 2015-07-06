@@ -17,5 +17,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="questlibs" level="project" />
     <orderEntry type="module" module-name="utils" />
+    <orderEntry type="library" name="google-play-services" level="project" />
+    <orderEntry type="module" module-name="google-play-services_lib" />
   </component>
 </module>

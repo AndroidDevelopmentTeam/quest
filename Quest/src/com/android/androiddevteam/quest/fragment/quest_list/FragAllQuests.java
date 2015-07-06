@@ -1,18 +1,23 @@
 package com.android.androiddevteam.quest.fragment.quest_list;
 
 import android.app.ActionBar;
+import android.content.Intent;
 import android.graphics.Color;
+import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.view.View;
 import android.widget.*;
 import com.android.androiddevteam.quest.R;
+import com.android.androiddevteam.quest.activity.ActNewQuest;
 import com.android.androiddevteam.quest.adapter.ListAdapterAllQuests;
+import com.android.androiddevteam.quest.bundle.BundleExtras;
 import com.android.androiddevteam.quest.fragment.FragBaseAbstract;
 import com.android.androiddevteam.quest.structure.QuestItem;
-import com.android.zeus.ui.fab.FloatingActionButton;
-import com.android.zeus.ui.fab.ShowHideOnScroll;
+import com.android.zeus.ui.floating_button.FloatingActionButton;
+import com.android.zeus.ui.floating_button.ShowHideOnScroll;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 /**
@@ -21,7 +26,8 @@ import java.util.List;
  * Date: 02.07.15
  */
 
-public class FragAllQuests extends FragBaseAbstract implements AdapterView.OnItemClickListener{
+public class FragAllQuests extends FragBaseAbstract
+        implements AdapterView.OnItemClickListener, View.OnClickListener{
 
     private static final int ROOT_LAYOUT_ID = R.layout.frag_quests;
     private static final int LIST_VIEW_ID = R.id.listView_quests_list;
@@ -75,6 +81,7 @@ public class FragAllQuests extends FragBaseAbstract implements AdapterView.OnIte
     @Override
     protected void setClickListeners(View rootView) {
         ((ListView) rootView.findViewById(LIST_VIEW_ID)).setOnItemClickListener(this);
+        rootView.findViewById(NEW_QUEST_ID).setOnClickListener(this);
     }
 
     /**
@@ -101,7 +108,7 @@ public class FragAllQuests extends FragBaseAbstract implements AdapterView.OnIte
     @Override
     protected void customizeViews(View rootView) {
         FloatingActionButton floatingActionButton = ((FloatingActionButton) rootView.findViewById(NEW_QUEST_ID));
-        floatingActionButton.setColor(Color.BLUE);
+        floatingActionButton.setColor(Color.WHITE);
         floatingActionButton.setSize(FloatingActionButton.SIZE_NORMAL);
         floatingActionButton.initBackground();
 
@@ -113,7 +120,13 @@ public class FragAllQuests extends FragBaseAbstract implements AdapterView.OnIte
     private BaseAdapter getAdapter(){
         List<QuestItem> questItems = new ArrayList<>();
         for (int i = 0; i < DEF_QUEST_ITEMS_COUNT; ++i){
-            questItems.add(new QuestItem("Quest #" + (i + 1), DEF_QUEST_DRAWABLE_ID));
+            QuestItem questItem = new QuestItem("Quest #" + (i + DEF_QUEST_ITEMS_COUNT), DEF_QUEST_DRAWABLE_ID);
+            questItem.setTime(Long.valueOf(System.nanoTime()).toString());
+            questItem.setDate(Integer.valueOf(Calendar.getInstance().getTime().getDate()).toString());
+            questItem.setCreator("#" + (i + DEF_QUEST_ITEMS_COUNT));
+            questItem.setPrize(Integer.valueOf((i + DEF_QUEST_ITEMS_COUNT)).toString());
+
+            questItems.add(questItem);
         }
         return new ListAdapterAllQuests(getActivity(), questItems);
     }
@@ -133,6 +146,35 @@ public class FragAllQuests extends FragBaseAbstract implements AdapterView.OnIte
      */
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        Toast.makeText(getActivity(), "" + position, Toast.LENGTH_SHORT).show();
+        QuestItem questItem = ((QuestItem) parent.getAdapter().getItem(position));
+
+        Bundle bundle = new Bundle();
+        bundle.putString(BundleExtras.FRAG_QUEST_QUEST_NAME_STRING, questItem.getName());
+        bundle.putString(BundleExtras.FRAG_QUEST_QUEST_TIME_STRING, questItem.getTime());
+        bundle.putString(BundleExtras.FRAG_QUEST_QUEST_DATE_STRING, questItem.getDate());
+        bundle.putString(BundleExtras.FRAG_QUEST_QUEST_CREATOR_STRING, questItem.getCreator());
+        bundle.putString(BundleExtras.FRAG_QUEST_QUEST_PRIZE_STRING, questItem.getPrize());
+
+        FragQuest fragQuest = new FragQuest();
+        fragQuest.setArguments(bundle);
+
+        replaceFragmentBackStack(fragQuest);
+    }
+
+    /**
+     * Called when a view has been clicked.
+     *
+     * @param v The view that was clicked.
+     */
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case NEW_QUEST_ID:
+                Intent intent = new Intent(getActivity(), ActNewQuest.class);
+                startActivity(intent);
+                break;
+            default:
+                break;
+        }
     }
 }

@@ -4,7 +4,7 @@ import android.graphics.Bitmap;
 
 /**
  * Project: Quest
- * Author: priadko
+ * Author: Oleksandr Priadko
  * Date: 02.07.15
  */
 
@@ -13,6 +13,10 @@ public class QuestItem {
     private String name;
     private Bitmap avatarBitmap = null;
     private int avatarDrawableId;
+    private String time;
+    private String date;
+    private String creator;
+    private String prize;
 
     public QuestItem(String name, Bitmap avatarBitmap) {
         this.name = name;
@@ -46,5 +50,37 @@ public class QuestItem {
 
     public void setAvatarDrawableId(int avatarDrawableId) {
         this.avatarDrawableId = avatarDrawableId;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public String getCreator() {
+        return creator;
+    }
+
+    public void setCreator(String creator) {
+        this.creator = creator;
+    }
+
+    public String getPrize() {
+        return prize;
+    }
+
+    public void setPrize(String prize) {
+        this.prize = prize;
     }
 }

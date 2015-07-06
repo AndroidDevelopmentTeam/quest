@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Time"
+            android:id="@+id/textView_quest_time"
+            android:drawableLeft="@drawable/ic_launcher" android:gravity="center|left"/>
+    <TextView android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="Date"
+              android:id="@+id/textView_quest_date"
+              android:drawableLeft="@drawable/ic_launcher" android:gravity="center|left"/>
+    <TextView android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="Creator"
+              android:id="@+id/textView_quest_creator"
+              android:drawableLeft="@drawable/ic_launcher" android:gravity="center|left"/>
+    <TextView android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="Prize"
+              android:id="@+id/textView_quest_prize"
+              android:drawableLeft="@drawable/ic_launcher" android:gravity="center|left"/>
+</LinearLayout>
