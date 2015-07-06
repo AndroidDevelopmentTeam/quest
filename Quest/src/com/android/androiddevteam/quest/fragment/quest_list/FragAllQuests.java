@@ -1,6 +1,7 @@
 package com.android.androiddevteam.quest.fragment.quest_list;
 
 import android.app.ActionBar;
+import android.graphics.Color;
 import android.support.v4.app.FragmentManager;
 import android.view.View;
 import android.widget.*;
@@ -8,6 +9,8 @@ import com.android.androiddevteam.quest.R;
 import com.android.androiddevteam.quest.adapter.ListAdapterAllQuests;
 import com.android.androiddevteam.quest.fragment.FragBaseAbstract;
 import com.android.androiddevteam.quest.structure.QuestItem;
+import com.android.zeus.ui.fab.FloatingActionButton;
+import com.android.zeus.ui.fab.ShowHideOnScroll;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,6 +25,7 @@ public class FragAllQuests extends FragBaseAbstract implements AdapterView.OnIte
 
     private static final int ROOT_LAYOUT_ID = R.layout.frag_quests;
     private static final int LIST_VIEW_ID = R.id.listView_quests_list;
+    private static final int NEW_QUEST_ID = R.id.floatButton_new_quest;
     private static final String TAG = "FragAllQuests";
     private static final String TITLE = "All quests";
 
@@ -96,13 +100,20 @@ public class FragAllQuests extends FragBaseAbstract implements AdapterView.OnIte
      */
     @Override
     protected void customizeViews(View rootView) {
+        FloatingActionButton floatingActionButton = ((FloatingActionButton) rootView.findViewById(NEW_QUEST_ID));
+        floatingActionButton.setColor(Color.BLUE);
+        floatingActionButton.setSize(FloatingActionButton.SIZE_NORMAL);
+        floatingActionButton.initBackground();
+
         ((ListView) rootView.findViewById(LIST_VIEW_ID)).setAdapter(getAdapter());
+        ShowHideOnScroll showHideOnScroll = new ShowHideOnScroll(floatingActionButton);
+        rootView.findViewById(LIST_VIEW_ID).setOnTouchListener(showHideOnScroll);
     }
 
     private BaseAdapter getAdapter(){
         List<QuestItem> questItems = new ArrayList<>();
         for (int i = 0; i < DEF_QUEST_ITEMS_COUNT; ++i){
-            questItems.add(new QuestItem("" + i, DEF_QUEST_DRAWABLE_ID));
+            questItems.add(new QuestItem("Quest #" + (i + 1), DEF_QUEST_DRAWABLE_ID));
         }
         return new ListAdapterAllQuests(getActivity(), questItems);
     }
