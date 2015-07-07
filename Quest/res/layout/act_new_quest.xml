@@ -20,11 +20,10 @@
             android:id="@+id/editText_new_quest_search"
             android:layout_marginLeft="@dimen/marginPadding"
             android:layout_marginTop="@dimen/marginPadding"
-            android:layout_marginRight="@dimen/marginPadding"
             android:drawableRight="@drawable/ic_action_search" android:hint="Search"
-            android:background="@android:color/white" android:paddingLeft="@dimen/marginPadding"
-            android:paddingRight="@dimen/marginPadding" android:layout_marginBottom="@dimen/marginPadding"
-            android:focusable="false"/>
+            android:background="@drawable/layer_list_def_white" android:paddingLeft="@dimen/marginPadding"
+            android:layout_marginBottom="@dimen/marginPadding"
+            android:focusable="false" android:layout_marginRight="@dimen/marginPadding"/>
     <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -35,10 +34,69 @@
             android:layout_marginBottom="@dimen/marginPadding"
             android:background="@drawable/selector_switch_thumb"
             android:src="@drawable/ic_action_location_found" android:layout_below="@+id/editText_new_quest_search"/>
-        <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content"
-                     android:id="@+id/imageButton_new_quest_switch_map" android:layout_alignParentBottom="false"
-                     android:layout_alignParentRight="true" android:layout_marginRight="@dimen/marginPadding"
-                     android:layout_marginBottom="@dimen/marginPadding"
-                     android:background="@drawable/selector_switch_thumb"
-                     android:layout_below="@+id/imageButton_new_quest_curr_loc"/>
+    <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content"
+                 android:id="@+id/imageButton_new_quest_switch_map" android:layout_alignParentBottom="false"
+                 android:layout_alignParentRight="true" android:layout_marginRight="@dimen/marginPadding"
+                 android:layout_marginBottom="@dimen/marginPadding"
+                 android:background="@drawable/selector_switch_thumb"
+                 android:src="@drawable/ic_action_web_site"
+                 android:layout_below="@+id/imageButton_new_quest_curr_loc"/>
+    <SlidingDrawer
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:handle="@+id/linearLayout_handle"
+            android:content="@+id/linearLayout_content" android:visibility="gone"
+            android:id="@+id/slidingDrawer_pointsList">
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/linearLayout_handle" android:gravity="center_horizontal"
+                android:padding="@dimen/marginPadding" android:background="@drawable/layer_list_def_white">
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Start point"
+                    android:id="@+id/textView_startPoint"
+                    android:gravity="center_vertical"
+                    android:drawableLeft="@drawable/ic_action_place"
+                    android:layout_marginBottom="@dimen/marginPadding"/>
+            <View
+                    android:layout_width="@dimen/commentItemWidth"
+                    android:layout_height="@dimen/dividerHeight"
+                    android:background="@android:color/black" android:layout_marginBottom="@dimen/marginPadding"/>
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Finish Point"
+                    android:id="@+id/textView_finishPoint"
+                    android:gravity="center_vertical"
+                    android:drawableLeft="@drawable/ic_action_place"/>
+        </LinearLayout>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/linearLayout_content" android:gravity="center_horizontal"
+                android:padding="@dimen/marginPadding" android:background="@drawable/layer_list_def_white">
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Point"
+                    android:gravity="center_vertical"
+                    android:drawableLeft="@drawable/ic_action_place"
+                    android:layout_marginBottom="@dimen/marginPadding"/>
+            <View
+                    android:layout_width="@dimen/commentItemWidth"
+                    android:layout_height="@dimen/dividerHeight"
+                    android:background="@android:color/black" android:layout_marginBottom="@dimen/marginPadding"/>
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Point"
+                    android:gravity="center_vertical"
+                    android:drawableLeft="@drawable/ic_action_place"/>
+        </LinearLayout>
+    </SlidingDrawer>
 </RelativeLayout>

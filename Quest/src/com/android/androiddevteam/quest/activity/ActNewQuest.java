@@ -1,10 +1,5 @@
 package com.android.androiddevteam.quest.activity;
 
-import android.content.Context;
-import android.location.Location;
-import android.location.LocationListener;
-import android.location.LocationManager;
-import android.location.LocationProvider;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.View;
@@ -13,7 +8,6 @@ import com.android.androiddevteam.quest.google_map.GoogleMapManager;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.model.LatLng;
 
 /**
  * Project: Quest
@@ -29,6 +23,7 @@ public class ActNewQuest extends FragmentActivity
     public static final int CONTENT_VIEW_ID = R.layout.act_new_quest;
     public static final int MAP_ID = R.id.google_map;
     public static final int MOVE_TO_CURRENT_LOC_ID = R.id.imageButton_new_quest_curr_loc;
+    public static final int SWITCH_MAP_TYPE_ID = R.id.imageButton_new_quest_switch_map;
 
     private GoogleMapManager googleMapManager;
 
@@ -39,6 +34,7 @@ public class ActNewQuest extends FragmentActivity
 
         ((MapFragment) getFragmentManager().findFragmentById(MAP_ID)).getMapAsync(this);
         findViewById(MOVE_TO_CURRENT_LOC_ID).setOnClickListener(this);
+        findViewById(SWITCH_MAP_TYPE_ID).setOnClickListener(this);
     }
 
     @Override
@@ -71,6 +67,9 @@ public class ActNewQuest extends FragmentActivity
         switch (v.getId()){
             case MOVE_TO_CURRENT_LOC_ID:
                 googleMapManager.moveToMyPosition();
+                break;
+            case SWITCH_MAP_TYPE_ID:
+                googleMapManager.switchMapType();
                 break;
             default:
                 break;

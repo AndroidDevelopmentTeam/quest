@@ -1,10 +1,17 @@
 package com.android.androiddevteam.quest.google_map;
 
+import android.app.Activity;
 import android.content.Context;
+import android.graphics.Color;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
+import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import com.android.androiddevteam.quest.R;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationListener;
@@ -13,12 +20,11 @@ import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.UiSettings;
-import com.google.android.gms.maps.model.CameraPosition;
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.Marker;
-import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.*;
+import com.google.maps.android.ui.IconGenerator;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
@@ -35,7 +41,7 @@ public class GoogleMapManager
         GoogleMap.OnMapLongClickListener,
         GoogleApiClient.ConnectionCallbacks,
         GoogleApiClient.OnConnectionFailedListener,
-        LocationListener {
+        LocationListener, GoogleMap.OnMarkerClickListener {
 
     private static final int DEFAULT_ZOOM = 20;
     private static final int DEFAULT_BEARING = 0;
@@ -43,19 +49,39 @@ public class GoogleMapManager
     private static final long LOCATION_REFRESH_TIME = 30000;
     private static final long LOCATION_FASTER_REFRESH_TIME = LOCATION_REFRESH_TIME / 2;
     private static final float LOCATION_MIN_DISTANCE = 10;
+    private static final int MAP_TYPE_OFFSET = 1;
+    private static final int ICON_GENERATOR_STYLE_OFFSET = 1;
+    private static final int MIN_COUNT_FOR_SHOW_SLIDE = 2;
+
+    private static final int START_POLYLINE_OFFSET = 2;
+    private static final int FINISH_POLYLINE_OFFSET = 1;
+
+    private static final int SIZE_OF_DISTANCE_CONTAINER = 1;
+    private static final int INDEX_OF_DISTANCE_CONTAINER = 0;
+
+    private static final String METERS = " meters";
+
+    private static final int POINTS_LIST_ID = R.id.slidingDrawer_pointsList;
+
+    private static final String DEF_MARKER_NAME = "Point";
 
     private GoogleMap googleMap;
     private Context context;
     private LatLng myCurrentPosition;
     private GoogleApiClient googleApiClient;
     private LocationRequest locationRequest;
+    private IconGenerator iconGenerator;
+    private List<LatLng> points;
+
     private boolean isConnected = false;
 
     public GoogleMapManager(GoogleMap googleMap, Context context) {
         this.googleMap = googleMap;
         this.context = context;
+        points = new ArrayList<LatLng>();
         buildGoogleApiClient();
         customizeGoogleMap();
+        prepareIconGenerator();
     }
 
     protected synchronized void buildGoogleApiClient() {
@@ -89,7 +115,7 @@ public class GoogleMapManager
         }
     }
 
-    private void customizeGoogleMap(){
+    private void customizeGoogleMap() {
         googleMap.setMyLocationEnabled(true);
         googleMap.setBuildingsEnabled(true);
         googleMap.setIndoorEnabled(true);
@@ -101,13 +127,20 @@ public class GoogleMapManager
         uiSettings.setAllGesturesEnabled(true);
         uiSettings.setMyLocationButtonEnabled(false);
         uiSettings.setMapToolbarEnabled(true);
-        uiSettings.setZoomControlsEnabled(true);
+//        uiSettings.setZoomControlsEnabled(true);
     }
 
     private void setListenersToGoogleMap() {
+        googleMap.setOnMarkerClickListener(this);
         googleMap.setOnMarkerDragListener(this);
         googleMap.setOnMapClickListener(this);
         googleMap.setOnMapLongClickListener(this);
+    }
+
+    private void prepareIconGenerator() {
+        iconGenerator = new IconGenerator(context);
+//        iconGenerator.setColor(Color.BLUE);
+//        iconGenerator.setStyle(IconGenerator.STYLE_BLUE);
     }
 
     public void moveToMyPosition(){
@@ -118,6 +151,14 @@ public class GoogleMapManager
 
     private void addMarker(MarkerOptions markerOptions){
         googleMap.addMarker(markerOptions);
+    }
+
+    public void switchMapType(){
+        if (googleMap.getMapType() >= GoogleMap.MAP_TYPE_HYBRID){
+            googleMap.setMapType(GoogleMap.MAP_TYPE_NONE);
+        } else {
+            googleMap.setMapType(googleMap.getMapType() + MAP_TYPE_OFFSET);
+        }
     }
 
     private void moveCameraToPosition(LatLng position){
@@ -149,6 +190,13 @@ public class GoogleMapManager
         myCurrentPosition = myNewPosition;
     }
 
+    //////////MarkerClickListener
+    @Override
+    public boolean onMarkerClick(Marker marker) {
+        marker.showInfoWindow();
+        return false;
+    }
+
     //////////MarkerDragListener
     @Override
     public void onMarkerDragStart(Marker marker) {
@@ -174,9 +222,56 @@ public class GoogleMapManager
     //////////MapLongClickListener
     @Override
     public void onMapLongClick(LatLng latLng) {
+        setStyleToIconGenerator();
+
         MarkerOptions markerOptions = new MarkerOptions();
-        markerOptions.title(latLng.toString())
-                .draggable(true);
+        markerOptions
+                .position(latLng)
+                .title(latLng.toString())
+                .draggable(true)
+                .icon(BitmapDescriptorFactory.fromBitmap(iconGenerator.makeIcon(DEF_MARKER_NAME)));
+
+        points.add(markerOptions.getPosition());
+
+        addMarker(markerOptions);
+
+        if (points.size() >= MIN_COUNT_FOR_SHOW_SLIDE){
+
+            PolylineOptions polylineOptions = new PolylineOptions();
+            polylineOptions.add(points.get(points.size() - START_POLYLINE_OFFSET));
+            polylineOptions.add(points.get(points.size() - FINISH_POLYLINE_OFFSET));
+            polylineOptions.color(IconGenerator.getStyleColor(iconGenerator.getStyle()));
+            googleMap.addPolyline(polylineOptions);
+
+            ((FragmentActivity) context).findViewById(POINTS_LIST_ID).setVisibility(View.VISIBLE);
+            
+            ((TextView) ((LinearLayout) ((FragmentActivity) context).findViewById(R.id.linearLayout_handle))
+                    .findViewById(R.id.textView_startPoint)).setText(
+                    distanceBetweenPoints(points.get(points.size() - START_POLYLINE_OFFSET),
+                            points.get(points.size() - FINISH_POLYLINE_OFFSET)));
+        }
+    }
+
+    private String distanceBetweenPoints(LatLng point1, LatLng point2){
+        float[] results = new float[SIZE_OF_DISTANCE_CONTAINER];
+        Location.distanceBetween(point1.latitude,
+                point1.longitude,
+                point2.latitude,
+                point2.longitude,
+                results);
+
+        return Float.valueOf(results[INDEX_OF_DISTANCE_CONTAINER]).intValue() + METERS;
+    }
+
+    private void setStyleToIconGenerator(){
+        if (iconGenerator.getStyle() >= IconGenerator.STYLE_ORANGE){
+            iconGenerator.setStyle(IconGenerator.STYLE_RED);
+        } else if(iconGenerator.getStyle() == IconGenerator.STYLE_DEFAULT
+                || iconGenerator.getStyle() == IconGenerator.STYLE_WHITE){
+            iconGenerator.setStyle(IconGenerator.STYLE_RED);
+        } else {
+            iconGenerator.setStyle(iconGenerator.getStyle() + ICON_GENERATOR_STYLE_OFFSET);
+        }
     }
 
     //////////GoogleApiClient.ConnectionCallbacks,GoogleApiClient.OnConnectionFailedListener
@@ -184,9 +279,7 @@ public class GoogleMapManager
     public void onConnected(Bundle bundle) {
         isConnected = true;
         if (myCurrentPosition == null){
-            Location lastKnownPosition = LocationServices.FusedLocationApi.getLastLocation(
-                    googleApiClient);
-
+            Location lastKnownPosition = LocationServices.FusedLocationApi.getLastLocation(googleApiClient);
             if (lastKnownPosition != null) {
                 currentLocationChanged(
                         new LatLng(lastKnownPosition.getLatitude(), lastKnownPosition.getLongitude()));

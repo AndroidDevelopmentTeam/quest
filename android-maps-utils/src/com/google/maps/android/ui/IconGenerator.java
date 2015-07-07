@@ -50,6 +50,7 @@ public class IconGenerator {
 
     private float mAnchorU = 0.5f;
     private float mAnchorV = 1f;
+    private int styleManually;
     private BubbleDrawable mBackground;
 
     /**
@@ -241,8 +242,13 @@ public class IconGenerator {
      * Sets the style of the icon. The style consists of a background and text appearance.
      */
     public void setStyle(int style) {
+        styleManually = style;
         setColor(getStyleColor(style));
         setTextAppearance(mContext, getTextStyle(style));
+    }
+
+    public int getStyle() {
+        return styleManually;
     }
 
     /**
@@ -297,7 +303,7 @@ public class IconGenerator {
     public static final int STYLE_PURPLE = 6;
     public static final int STYLE_ORANGE = 7;
 
-    private static int getStyleColor(int style) {
+    public static int getStyleColor(int style) {
         switch (style) {
             default:
             case STYLE_DEFAULT:
