@@ -77,7 +77,7 @@ public abstract class FragBaseAbstract extends Fragment{
     protected void replaceFragmentBackStack(FragBaseAbstract fragment) {
         getFragmentManager()
                 .beginTransaction()
-                .replace(R.id.swipe_refresh_new_quest/*MainActivity.FRAGMENT_CONTAINER_ID*/, fragment)
+                .replace(MainActivity.FRAGMENT_CONTAINER_ID, fragment)
                 .addToBackStack(fragment.getFragmentTag())
                 .commit();
     }

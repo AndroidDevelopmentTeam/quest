@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.View;
 import android.widget.*;
 import com.android.androiddevteam.quest.R;
@@ -27,19 +28,26 @@ import java.util.List;
  */
 
 public class FragAllQuests extends FragBaseAbstract
-        implements AdapterView.OnItemClickListener, View.OnClickListener{
+        implements AdapterView.OnItemClickListener, View.OnClickListener, SwipeRefreshLayout.OnRefreshListener {
 
     private static final int ROOT_LAYOUT_ID = R.layout.frag_quests;
     private static final int LIST_VIEW_ID = R.id.listView_quests_list;
     private static final int NEW_QUEST_ID = R.id.floatButton_new_quest;
+    private static final int SWIPE_REFRESH_LIST_ID = R.id.swipe_refresh_new_quest;
     private static final String TAG = "FragAllQuests";
     private static final String TITLE = "All quests";
+
+    @Deprecated
+    private static final String REFRESH_MESSAGE = "Refreshing";
 
     @Deprecated
     private static final int DEF_QUEST_DRAWABLE_ID = R.drawable.ic_launcher;
 
     @Deprecated
     private static final int DEF_QUEST_ITEMS_COUNT = 100;
+
+    private SwipeRefreshLayout swipeRefreshLayout;
+    private ListView questsListView;
 
     /**
      * Return fragment tag. Tag will be used in transition in SupportFragmentManager.
@@ -80,8 +88,13 @@ public class FragAllQuests extends FragBaseAbstract
      */
     @Override
     protected void setClickListeners(View rootView) {
-        ((ListView) rootView.findViewById(LIST_VIEW_ID)).setOnItemClickListener(this);
+        questsListView = ((ListView) rootView.findViewById(LIST_VIEW_ID));
+        questsListView.setOnItemClickListener(this);
+
         rootView.findViewById(NEW_QUEST_ID).setOnClickListener(this);
+
+        swipeRefreshLayout = ((SwipeRefreshLayout) rootView.findViewById(SWIPE_REFRESH_LIST_ID));
+        swipeRefreshLayout.setOnRefreshListener(this);
     }
 
     /**
@@ -107,14 +120,19 @@ public class FragAllQuests extends FragBaseAbstract
      */
     @Override
     protected void customizeViews(View rootView) {
+        swipeRefreshLayout.setColorSchemeResources(android.R.color.holo_blue_bright,
+                android.R.color.holo_green_light,
+                android.R.color.holo_orange_light,
+                android.R.color.holo_red_light);
+
         FloatingActionButton floatingActionButton = ((FloatingActionButton) rootView.findViewById(NEW_QUEST_ID));
         floatingActionButton.setColor(Color.WHITE);
         floatingActionButton.setSize(FloatingActionButton.SIZE_NORMAL);
         floatingActionButton.initBackground();
 
-        ((ListView) rootView.findViewById(LIST_VIEW_ID)).setAdapter(getAdapter());
+        questsListView.setAdapter(getAdapter());
         ShowHideOnScroll showHideOnScroll = new ShowHideOnScroll(floatingActionButton);
-        rootView.findViewById(LIST_VIEW_ID).setOnTouchListener(showHideOnScroll);
+        questsListView.setOnTouchListener(showHideOnScroll);
     }
 
     private BaseAdapter getAdapter(){
@@ -176,5 +194,10 @@ public class FragAllQuests extends FragBaseAbstract
             default:
                 break;
         }
+    }
+
+    @Override
+    public void onRefresh() {
+        Toast.makeText(getActivity(), REFRESH_MESSAGE, Toast.LENGTH_LONG).show();
     }
 }
