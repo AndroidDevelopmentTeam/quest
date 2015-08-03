@@ -78,9 +78,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:id="@+id/linearLayout_content" android:gravity="center_horizontal"
-                android:padding="@dimen/marginPadding" android:background="@drawable/layer_list_def_white">
-            <TextView
+                android:id="@+id/linearLayout_content"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/marginPadding"
+                android:background="@drawable/layer_list_def_white">
+            <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/listView_points">
+            </ListView>
+            <!--<TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Point"
@@ -96,7 +103,7 @@
                     android:layout_height="wrap_content"
                     android:text="Point"
                     android:gravity="center_vertical"
-                    android:drawableLeft="@drawable/ic_action_place"/>
+                    android:drawableLeft="@drawable/ic_action_place"/>-->
         </LinearLayout>
     </SlidingDrawer>
 </RelativeLayout>

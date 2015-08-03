@@ -244,7 +244,7 @@ public class GoogleMapManager
             googleMap.addPolyline(polylineOptions);
 
             ((FragmentActivity) context).findViewById(POINTS_LIST_ID).setVisibility(View.VISIBLE);
-            
+
             ((TextView) ((LinearLayout) ((FragmentActivity) context).findViewById(R.id.linearLayout_handle))
                     .findViewById(R.id.textView_startPoint)).setText(
                     distanceBetweenPoints(points.get(points.size() - START_POLYLINE_OFFSET),

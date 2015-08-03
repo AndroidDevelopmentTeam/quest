@@ -1,33 +1,33 @@
 package com.android.androiddevteam.quest.adapter;
 
 import android.content.Context;
-import android.graphics.drawable.BitmapDrawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.TextView;
 import com.android.androiddevteam.quest.R;
-import com.android.androiddevteam.quest.structure.QuestItem;
+import com.android.androiddevteam.quest.structure.PointItem;
 
 import java.util.List;
 
 /**
  * Project: Quest
- * Author: priadko
+ * Author: Oleksandr Priadko
  * Date: 02.07.15
  */
 
-public class ListAdapterAllQuests extends BaseAdapter{
+public class ListAdapterAllPoints extends BaseAdapter{
 
-    private static final int ITEM_LAYOUT_ID = R.layout.adapter_item_quest;
-    private static final int QUEST_NAME_AVATAR_ID = R.id.textView_quest_item_name;
-    private static final int DEFAULT_APP_PADDING = R.dimen.marginPadding;
+    private static final int POINT_ITEM_LAYOUT_ID = R.layout.adapter_item_point;
+    private static final int DISTANCE_ITEM_LAYOUT_ID = R.layout.adapter_item_distance;
+    private static final int MOD = 2;
+    private static final int REMAINDER_FOR_DISTANCE = 0;
 
-    private List<QuestItem> items;
+
+    private List<PointItem> items;
     private Context context;
 
-    public ListAdapterAllQuests(Context context, List<QuestItem> items) {
+    public ListAdapterAllPoints(Context context, List<PointItem> items) {
         this.context = context;
         this.items = items;
     }
@@ -88,30 +88,35 @@ public class ListAdapterAllQuests extends BaseAdapter{
         if (convertView != null){
             populateConvertView(convertView, items.get(position));
         } else {
-            convertView = LayoutInflater.from(context).inflate(ITEM_LAYOUT_ID, null, false);
-            populateConvertView(convertView, items.get(position));
+            if ((position % MOD) > REMAINDER_FOR_DISTANCE){
+                convertView = LayoutInflater.from(context).inflate(DISTANCE_ITEM_LAYOUT_ID, null, false);
+                populateConvertView(convertView, items.get(position));
+            } else {
+                convertView = LayoutInflater.from(context).inflate(POINT_ITEM_LAYOUT_ID, null, false);
+                populateConvertView(convertView, items.get(position));
+            }
         }
         return convertView;
     }
 
-    private void populateConvertView(View convertView, QuestItem questItem){
-        TextView textView = ((TextView) convertView.findViewById(QUEST_NAME_AVATAR_ID));
-
-        textView.setText(questItem.getName());
-        textView.setCompoundDrawablePadding(
-                Float.valueOf(context.getResources().getDimension(DEFAULT_APP_PADDING)).intValue());
-        if (questItem.getAvatarBitmap() != null){
-            textView.setCompoundDrawablesWithIntrinsicBounds(
-                    new BitmapDrawable(context.getResources(), questItem.getAvatarBitmap()),
-                    null,
-                    null,
-                    null);
-        } else {
-            textView.setCompoundDrawablesWithIntrinsicBounds(
-                    context.getResources().getDrawable(questItem.getAvatarDrawableId()),
-                    null,
-                    null,
-                    null);
-        }
+    private void populateConvertView(View convertView, PointItem pointItem){
+//        TextView textView = ((TextView) convertView.findViewById(QUEST_NAME_AVATAR_ID));
+//
+//        textView.setText(questItem.getName());
+//        textView.setCompoundDrawablePadding(
+//                Float.valueOf(context.getResources().getDimension(DEFAULT_APP_PADDING)).intValue());
+//        if (questItem.getAvatarBitmap() != null){
+//            textView.setCompoundDrawablesWithIntrinsicBounds(
+//                    new BitmapDrawable(context.getResources(), questItem.getAvatarBitmap()),
+//                    null,
+//                    null,
+//                    null);
+//        } else {
+//            textView.setCompoundDrawablesWithIntrinsicBounds(
+//                    context.getResources().getDrawable(questItem.getAvatarDrawableId()),
+//                    null,
+//                    null,
+//                    null);
+//        }
     }
 }

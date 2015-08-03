@@ -8,6 +8,7 @@ import com.android.androiddevteam.quest.google_map.GoogleMapManager;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.model.LatLng;
 
 /**
  * Project: Quest
@@ -35,6 +36,10 @@ public class ActNewQuest extends FragmentActivity
         ((MapFragment) getFragmentManager().findFragmentById(MAP_ID)).getMapAsync(this);
         findViewById(MOVE_TO_CURRENT_LOC_ID).setOnClickListener(this);
         findViewById(SWITCH_MAP_TYPE_ID).setOnClickListener(this);
+    }
+
+    public void addPointToList(LatLng position, String pointName){
+
     }
 
     @Override
