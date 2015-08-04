@@ -45,35 +45,46 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:handle="@+id/linearLayout_handle"
+            android:handle="@+id/relativeLayout_handle"
             android:content="@+id/linearLayout_content" android:visibility="gone"
             android:id="@+id/slidingDrawer_pointsList">
-        <LinearLayout
+        <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:id="@+id/linearLayout_handle" android:gravity="center_horizontal"
+                android:id="@+id/relativeLayout_handle" android:gravity="center_horizontal"
                 android:padding="@dimen/marginPadding" android:background="@drawable/layer_list_def_white">
             <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Start point"
                     android:id="@+id/textView_startPoint"
-                    android:gravity="center_vertical"
                     android:drawableLeft="@drawable/ic_action_place"
-                    android:layout_marginBottom="@dimen/marginPadding"/>
+                    android:layout_marginBottom="@dimen/marginPadding" android:gravity="center_vertical"/>
             <View
-                    android:layout_width="@dimen/commentItemWidth"
-                    android:layout_height="@dimen/dividerHeight"
-                    android:background="@android:color/black" android:layout_marginBottom="@dimen/marginPadding"/>
-            <TextView
                     android:layout_width="match_parent"
+                    android:layout_height="@dimen/dividerHeight"
+                    android:background="@android:color/black"
+                    android:layout_marginBottom="@dimen/marginPadding" android:layout_alignParentLeft="false"
+                    android:layout_alignParentTop="false"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/marginPadding"
+                    android:layout_toLeftOf="@+id/textView_main_distance"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="[start-end distance]"
+                    android:id="@+id/textView_main_distance" android:layout_alignParentLeft="false"
+                    android:layout_alignParentTop="false"
+                    android:layout_centerVertical="true" android:layout_alignParentRight="true"/>
+            <TextView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Finish Point"
                     android:id="@+id/textView_finishPoint"
-                    android:gravity="center_vertical"
-                    android:drawableLeft="@drawable/ic_action_place"/>
-        </LinearLayout>
+                    android:drawableLeft="@drawable/ic_action_place"
+                    android:layout_below="@+id/textView_startPoint" android:gravity="center_vertical"/>
+        </RelativeLayout>
         <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -85,25 +96,8 @@
             <ListView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/listView_points">
+                    android:id="@+id/listView_points" android:divider="@android:color/transparent">
             </ListView>
-            <!--<TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Point"
-                    android:gravity="center_vertical"
-                    android:drawableLeft="@drawable/ic_action_place"
-                    android:layout_marginBottom="@dimen/marginPadding"/>
-            <View
-                    android:layout_width="@dimen/commentItemWidth"
-                    android:layout_height="@dimen/dividerHeight"
-                    android:background="@android:color/black" android:layout_marginBottom="@dimen/marginPadding"/>
-            <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Point"
-                    android:gravity="center_vertical"
-                    android:drawableLeft="@drawable/ic_action_place"/>-->
         </LinearLayout>
     </SlidingDrawer>
 </RelativeLayout>

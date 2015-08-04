@@ -1,17 +1,16 @@
 package com.android.androiddevteam.quest.google_map;
 
-import android.app.Activity;
 import android.content.Context;
-import android.graphics.Color;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
 import android.os.Bundle;
+import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentActivity;
-import android.view.View;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 import com.android.androiddevteam.quest.R;
+import com.android.androiddevteam.quest.activity.ActNewQuest;
+import com.android.androiddevteam.quest.dialogfragments.dialog_ok.DlgFragTitle;
+import com.android.androiddevteam.quest.structure.PointItem;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationListener;
@@ -24,7 +23,6 @@ import com.google.android.gms.maps.model.*;
 import com.google.maps.android.ui.IconGenerator;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
@@ -59,33 +57,33 @@ public class GoogleMapManager
     private static final int SIZE_OF_DISTANCE_CONTAINER = 1;
     private static final int INDEX_OF_DISTANCE_CONTAINER = 0;
 
-    private static final String METERS = " meters";
+    public static final String METERS = " m.";
 
     private static final int POINTS_LIST_ID = R.id.slidingDrawer_pointsList;
 
     private static final String DEF_MARKER_NAME = "Point";
 
     private GoogleMap googleMap;
-    private Context context;
+    private Context actNQContext;
     private LatLng myCurrentPosition;
     private GoogleApiClient googleApiClient;
     private LocationRequest locationRequest;
     private IconGenerator iconGenerator;
-    private List<LatLng> points;
+
 
     private boolean isConnected = false;
 
-    public GoogleMapManager(GoogleMap googleMap, Context context) {
+    public GoogleMapManager(GoogleMap googleMap, Context actNQContext) {
         this.googleMap = googleMap;
-        this.context = context;
-        points = new ArrayList<LatLng>();
+        this.actNQContext = actNQContext;
+
         buildGoogleApiClient();
         customizeGoogleMap();
         prepareIconGenerator();
     }
 
     protected synchronized void buildGoogleApiClient() {
-        googleApiClient = new GoogleApiClient.Builder(context)
+        googleApiClient = new GoogleApiClient.Builder(actNQContext)
                 .addConnectionCallbacks(this)
                 .addOnConnectionFailedListener(this)
                 .addApi(LocationServices.API)
@@ -138,7 +136,7 @@ public class GoogleMapManager
     }
 
     private void prepareIconGenerator() {
-        iconGenerator = new IconGenerator(context);
+        iconGenerator = new IconGenerator(actNQContext);
 //        iconGenerator.setColor(Color.BLUE);
 //        iconGenerator.setStyle(IconGenerator.STYLE_BLUE);
     }
@@ -171,7 +169,7 @@ public class GoogleMapManager
     }
 
     public void searchLocation(String searchLocation) {
-        Geocoder geoCoder = new Geocoder(context, Locale.getDefault());
+        Geocoder geoCoder = new Geocoder(actNQContext, Locale.getDefault());
         List<Address> addresses;
         try {
             addresses = geoCoder.getFromLocationName(searchLocation, DEFAULT_ZOOM);
@@ -193,8 +191,11 @@ public class GoogleMapManager
     //////////MarkerClickListener
     @Override
     public boolean onMarkerClick(Marker marker) {
-        marker.showInfoWindow();
-        return false;
+        DlgFragTitle dlgFragTitle = new DlgFragTitle();
+        dlgFragTitle.setMessage(marker.getTitle());
+        dlgFragTitle
+                .show(((ActNewQuest) actNQContext).getSupportFragmentManager(), dlgFragTitle.getDialogTag());
+        return true;
     }
 
     //////////MarkerDragListener
@@ -222,45 +223,34 @@ public class GoogleMapManager
     //////////MapLongClickListener
     @Override
     public void onMapLongClick(LatLng latLng) {
+        int pointsListSize = ((ActNewQuest) actNQContext).getPoints().size();
         setStyleToIconGenerator();
 
         MarkerOptions markerOptions = new MarkerOptions();
         markerOptions
                 .position(latLng)
-                .title(latLng.toString())
+                .title("" + pointsListSize)
                 .draggable(true)
-                .icon(BitmapDescriptorFactory.fromBitmap(iconGenerator.makeIcon(DEF_MARKER_NAME)));
+                .icon(BitmapDescriptorFactory.fromBitmap(iconGenerator.makeIcon("" + pointsListSize)));
 
-        points.add(markerOptions.getPosition());
+        PointItem pointItem = new PointItem(markerOptions, IconGenerator.getStyleColor(iconGenerator.getStyle()));
+
+        ((ActNewQuest) actNQContext).addPointToList(pointItem);
+
+        pointsListSize = ((ActNewQuest) actNQContext).getPoints().size();
 
         addMarker(markerOptions);
 
-        if (points.size() >= MIN_COUNT_FOR_SHOW_SLIDE){
+        if (pointsListSize >= MIN_COUNT_FOR_SHOW_SLIDE){
 
             PolylineOptions polylineOptions = new PolylineOptions();
-            polylineOptions.add(points.get(points.size() - START_POLYLINE_OFFSET));
-            polylineOptions.add(points.get(points.size() - FINISH_POLYLINE_OFFSET));
+            polylineOptions.add(((ActNewQuest) actNQContext).getPoint(pointsListSize - START_POLYLINE_OFFSET).getPointPosition());
+            polylineOptions.add(((ActNewQuest) actNQContext).getPoint(pointsListSize - FINISH_POLYLINE_OFFSET).getPointPosition());
             polylineOptions.color(IconGenerator.getStyleColor(iconGenerator.getStyle()));
             googleMap.addPolyline(polylineOptions);
 
-            ((FragmentActivity) context).findViewById(POINTS_LIST_ID).setVisibility(View.VISIBLE);
-
-            ((TextView) ((LinearLayout) ((FragmentActivity) context).findViewById(R.id.linearLayout_handle))
-                    .findViewById(R.id.textView_startPoint)).setText(
-                    distanceBetweenPoints(points.get(points.size() - START_POLYLINE_OFFSET),
-                            points.get(points.size() - FINISH_POLYLINE_OFFSET)));
+            ((ActNewQuest) actNQContext).showHidePointsList(true);
         }
-    }
-
-    private String distanceBetweenPoints(LatLng point1, LatLng point2){
-        float[] results = new float[SIZE_OF_DISTANCE_CONTAINER];
-        Location.distanceBetween(point1.latitude,
-                point1.longitude,
-                point2.latitude,
-                point2.longitude,
-                results);
-
-        return Float.valueOf(results[INDEX_OF_DISTANCE_CONTAINER]).intValue() + METERS;
     }
 
     private void setStyleToIconGenerator(){
@@ -272,6 +262,28 @@ public class GoogleMapManager
         } else {
             iconGenerator.setStyle(iconGenerator.getStyle() + ICON_GENERATOR_STYLE_OFFSET);
         }
+    }
+
+    public static String distanceBetweenPointsString(LatLng point1, LatLng point2){
+        float[] results = new float[SIZE_OF_DISTANCE_CONTAINER];
+        Location.distanceBetween(point1.latitude,
+                point1.longitude,
+                point2.latitude,
+                point2.longitude,
+                results);
+
+        return Float.valueOf(results[INDEX_OF_DISTANCE_CONTAINER]).intValue() + METERS;
+    }
+
+    public static int distanceBetweenPointsInt(LatLng point1, LatLng point2){
+        float[] results = new float[SIZE_OF_DISTANCE_CONTAINER];
+        Location.distanceBetween(point1.latitude,
+                point1.longitude,
+                point2.latitude,
+                point2.longitude,
+                results);
+
+        return Float.valueOf(results[INDEX_OF_DISTANCE_CONTAINER]).intValue();
     }
 
     //////////GoogleApiClient.ConnectionCallbacks,GoogleApiClient.OnConnectionFailedListener

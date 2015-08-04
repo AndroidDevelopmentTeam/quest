@@ -1,11 +1,14 @@
 package com.android.androiddevteam.quest.adapter;
 
 import android.content.Context;
+import android.graphics.drawable.BitmapDrawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.TextView;
 import com.android.androiddevteam.quest.R;
+import com.android.androiddevteam.quest.google_map.GoogleMapManager;
 import com.android.androiddevteam.quest.structure.PointItem;
 
 import java.util.List;
@@ -18,14 +21,25 @@ import java.util.List;
 
 public class ListAdapterAllPoints extends BaseAdapter{
 
+    //Point id's
     private static final int POINT_ITEM_LAYOUT_ID = R.layout.adapter_item_point;
+    private static final int POINT_ITEM_POINT_NAME_ID = R.id.textView_point_name;
+    private static final int POINT_ITEM_POINT_POSITION_ID = R.id.textView_point_position;
+
+    //Distance id's
     private static final int DISTANCE_ITEM_LAYOUT_ID = R.layout.adapter_item_distance;
+    private static final int DISTANCE_ITEM_DISTANCE_ID = R.id.textView_dist_item_distance;
+    private static final int DISTANCE_ITEM_DIVIDER_ID = R.id.view_dist_item_divider;
+
     private static final int MOD = 2;
-    private static final int REMAINDER_FOR_DISTANCE = 0;
+    private static final int REMAINDER_FOR_POINT = 0;
 
 
     private List<PointItem> items;
     private Context context;
+
+    private int diff = 0;
+//    private int maxDiff = 0;
 
     public ListAdapterAllPoints(Context context, List<PointItem> items) {
         this.context = context;
@@ -39,7 +53,7 @@ public class ListAdapterAllPoints extends BaseAdapter{
      */
     @Override
     public int getCount() {
-        return items.size();
+        return (items.size() * 2) - 1;
     }
 
     /**
@@ -62,7 +76,7 @@ public class ListAdapterAllPoints extends BaseAdapter{
      */
     @Override
     public long getItemId(int position) {
-        return position;
+        return 0;
     }
 
     /**
@@ -85,38 +99,56 @@ public class ListAdapterAllPoints extends BaseAdapter{
      */
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        if (convertView != null){
-            populateConvertView(convertView, items.get(position));
+        if(position == 0){
+            diff = 0;
+        }
+        if ((position % MOD) == REMAINDER_FOR_POINT){
+            convertView = LayoutInflater.from(context).inflate(POINT_ITEM_LAYOUT_ID, null, false);
+                populatePointView(convertView, items.get(diff));
         } else {
-            if ((position % MOD) > REMAINDER_FOR_DISTANCE){
-                convertView = LayoutInflater.from(context).inflate(DISTANCE_ITEM_LAYOUT_ID, null, false);
-                populateConvertView(convertView, items.get(position));
+            convertView = LayoutInflater.from(context).inflate(DISTANCE_ITEM_LAYOUT_ID, null, false);
+            diff++;
+            if (position == 1){
+                populateDistanceView(convertView, position + 1);
             } else {
-                convertView = LayoutInflater.from(context).inflate(POINT_ITEM_LAYOUT_ID, null, false);
-                populateConvertView(convertView, items.get(position));
+                populateDistanceView(convertView, position);
             }
         }
+
         return convertView;
     }
 
-    private void populateConvertView(View convertView, PointItem pointItem){
-//        TextView textView = ((TextView) convertView.findViewById(QUEST_NAME_AVATAR_ID));
-//
-//        textView.setText(questItem.getName());
-//        textView.setCompoundDrawablePadding(
-//                Float.valueOf(context.getResources().getDimension(DEFAULT_APP_PADDING)).intValue());
-//        if (questItem.getAvatarBitmap() != null){
-//            textView.setCompoundDrawablesWithIntrinsicBounds(
-//                    new BitmapDrawable(context.getResources(), questItem.getAvatarBitmap()),
-//                    null,
-//                    null,
-//                    null);
-//        } else {
-//            textView.setCompoundDrawablesWithIntrinsicBounds(
-//                    context.getResources().getDrawable(questItem.getAvatarDrawableId()),
-//                    null,
-//                    null,
-//                    null);
-//        }
+    private void populatePointView(View convertView, PointItem pointItem){
+        TextView pointNameAvatar = ((TextView) convertView.findViewById(POINT_ITEM_POINT_NAME_ID));
+
+        pointNameAvatar.setText(pointItem.getPointName());
+        pointNameAvatar.setTextColor(pointItem.getPointColor());
+//        pointNameAvatar.setCompoundDrawablePadding(
+//                Float.valueOf(context.getResources().getDimension(MainActivity.DEFAULT_APP_PADDING)).intValue());
+        if (pointItem.getPointAvatarBitmap() != null){
+            pointNameAvatar.setCompoundDrawablesWithIntrinsicBounds(
+                    new BitmapDrawable(context.getResources(), pointItem.getPointAvatarBitmap()),
+                    null,
+                    null,
+                    null);
+        }
+
+        TextView pointPosition = ((TextView) convertView.findViewById(POINT_ITEM_POINT_POSITION_ID));
+        pointPosition.setText(pointItem.getPointPosition().toString());
+        pointPosition.setTextColor(pointItem.getPointColor());
+    }
+
+    private void populateDistanceView(View convertView, int currentPosition){
+        GoogleMapManager.distanceBetweenPointsString(items.get(currentPosition - diff - 1).getPointPosition(),
+                items.get(currentPosition - diff).getPointPosition());
+
+        ((TextView) convertView.findViewById(DISTANCE_ITEM_DISTANCE_ID))
+                .setText(GoogleMapManager
+                        .distanceBetweenPointsString(
+                                items.get(currentPosition - diff - 1).getPointPosition(),
+                                items.get(currentPosition - diff).getPointPosition()));
+
+//        convertView.findViewById(DISTANCE_ITEM_DIVIDER_ID)
+//                .setBackgroundColor(items.get(currentPosition - diff).getPointColor());
     }
 }

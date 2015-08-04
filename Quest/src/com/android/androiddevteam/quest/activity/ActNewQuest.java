@@ -1,14 +1,19 @@
 package com.android.androiddevteam.quest.activity;
 
-import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.view.View;
+import android.widget.ListView;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 import com.android.androiddevteam.quest.R;
+import com.android.androiddevteam.quest.adapter.ListAdapterAllPoints;
 import com.android.androiddevteam.quest.google_map.GoogleMapManager;
+import com.android.androiddevteam.quest.structure.PointItem;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.model.LatLng;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Project: Quest
@@ -16,7 +21,7 @@ import com.google.android.gms.maps.model.LatLng;
  * Date: 06.07.15
  */
 
-public class ActNewQuest extends FragmentActivity
+public class ActNewQuest extends BaseAbstractFragmentActivity
         implements
         OnMapReadyCallback,
         View.OnClickListener{
@@ -25,21 +30,102 @@ public class ActNewQuest extends FragmentActivity
     public static final int MAP_ID = R.id.google_map;
     public static final int MOVE_TO_CURRENT_LOC_ID = R.id.imageButton_new_quest_curr_loc;
     public static final int SWITCH_MAP_TYPE_ID = R.id.imageButton_new_quest_switch_map;
+    public static final int POINTS_DRAWER_ID = R.id.slidingDrawer_pointsList;
+    public static final int POINTS_LIST_ID = R.id.listView_points;
+
+    //Handle points
+    public static final int HANDLE_LAYOUT_ID = R.id.relativeLayout_handle;
+    public static final int HANDLE_START_POINT_ID = R.id.textView_startPoint;
+    public static final int HANDLE_FINISH_POINT_ID = R.id.textView_finishPoint;
+    public static final int HANDLE_DISTANCE_MAIN_ID = R.id.textView_main_distance;
+
+    //Content points
+    public static final int CONTENT_LAYOUT_ID = R.id.linearLayout_content;
+
+    public static final int START_POINT_INDEX = 0;
 
     private GoogleMapManager googleMapManager;
+    private List<PointItem> points;
+    private int mainDistance = 0;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(CONTENT_VIEW_ID);
+    protected int getFragmentContainerId() {
+        return 0;
+    }
 
+    @Override
+    protected int getContentViewId() {
+        return CONTENT_VIEW_ID;
+    }
+
+    @Override
+    protected void additionalCustomization() {
         ((MapFragment) getFragmentManager().findFragmentById(MAP_ID)).getMapAsync(this);
         findViewById(MOVE_TO_CURRENT_LOC_ID).setOnClickListener(this);
         findViewById(SWITCH_MAP_TYPE_ID).setOnClickListener(this);
+
+        points = new ArrayList<>();
+        ListAdapterAllPoints adapterAllPoints = new ListAdapterAllPoints(this, points);
+        ((ListView) findViewById(POINTS_LIST_ID)).setAdapter(adapterAllPoints);
     }
 
-    public void addPointToList(LatLng position, String pointName){
+    public void addPointToList(PointItem pointItem){
+        points.add(pointItem);
 
+        if (points.size() > 1){
+            mainDistance
+                    += GoogleMapManager.distanceBetweenPointsInt(points.get(START_POINT_INDEX).getPointPosition(),
+                    pointItem.getPointPosition());
+        }
+
+        setMainDistance();
+        ((ListAdapterAllPoints) ((ListView) findViewById(POINTS_LIST_ID)).getAdapter())
+                .notifyDataSetChanged();
+    }
+
+    public void removePointFromList(PointItem pointItem){
+        points.add(pointItem);
+
+        ((ListAdapterAllPoints) ((ListView) findViewById(POINTS_LIST_ID)).getAdapter())
+                .notifyDataSetChanged();
+    }
+
+    public List<PointItem> getPoints() {
+        return points;
+    }
+
+    public PointItem getPoint(int position) {
+        return points.get(position);
+    }
+
+    public void setPoints(List<PointItem> points) {
+        this.points = points;
+
+        ((ListAdapterAllPoints) ((ListView) findViewById(POINTS_LIST_ID)).getAdapter())
+                .notifyDataSetChanged();
+    }
+
+    public void showHidePointsList(boolean show){
+        if (show){
+            findViewById(POINTS_DRAWER_ID).setVisibility(View.VISIBLE);
+
+            RelativeLayout handleLayout = ((RelativeLayout) findViewById(HANDLE_LAYOUT_ID));
+            ((TextView) handleLayout.findViewById(HANDLE_START_POINT_ID))
+                    .setText(points.get(START_POINT_INDEX).getPointName());
+            ((TextView) handleLayout.findViewById(HANDLE_FINISH_POINT_ID))
+                    .setText(points.get(points.size() - 1).getPointName());
+
+            setMainDistance();
+        } else {
+            findViewById(POINTS_LIST_ID).setVisibility(View.GONE);
+        }
+    }
+
+    private void setMainDistance(){
+        RelativeLayout handleLayout = ((RelativeLayout) findViewById(HANDLE_LAYOUT_ID));
+
+        ((TextView) handleLayout.findViewById(HANDLE_DISTANCE_MAIN_ID))
+                .setText(mainDistance + GoogleMapManager.METERS);
     }
 
     @Override

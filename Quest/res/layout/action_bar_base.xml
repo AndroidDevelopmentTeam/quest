@@ -13,5 +13,5 @@
             android:layout_centerVertical="true"
             android:layout_alignParentLeft="false"
             android:layout_alignParentRight="false"
-            android:textSize="@dimen/textSizeArticle"/>
+            android:textSize="@dimen/textSizeArticle" android:layout_marginRight="@dimen/marginPadding"/>
 </RelativeLayout>

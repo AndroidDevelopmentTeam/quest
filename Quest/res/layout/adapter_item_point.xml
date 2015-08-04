@@ -3,19 +3,16 @@
               android:orientation="horizontal"
               android:layout_width="match_parent"
               android:layout_height="wrap_content" android:paddingLeft="@dimen/marginPadding"
-              android:paddingTop="@dimen/marginPadding" android:gravity="center_vertical"
-              android:paddingBottom="@dimen/marginPadding">
+              android:gravity="center_vertical"
+        >
 
-    <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageView_point_avatar" android:layout_marginRight="@dimen/marginPadding"
-            android:src="@drawable/ic_action_place"/>
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="[point_name]"
-            android:id="@+id/textView_point_name" android:layout_marginRight="@dimen/marginPadding"/>
+            android:id="@+id/textView_point_name"
+            android:layout_marginRight="@dimen/marginPadding"
+            android:drawableLeft="@drawable/ic_action_place" android:gravity="center_vertical"/>
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

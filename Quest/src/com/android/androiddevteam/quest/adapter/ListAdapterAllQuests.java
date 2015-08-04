@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 import com.android.androiddevteam.quest.R;
+import com.android.androiddevteam.quest.activity.MainActivity;
 import com.android.androiddevteam.quest.structure.QuestItem;
 
 import java.util.List;
@@ -22,7 +23,6 @@ public class ListAdapterAllQuests extends BaseAdapter{
 
     private static final int ITEM_LAYOUT_ID = R.layout.adapter_item_quest;
     private static final int QUEST_NAME_AVATAR_ID = R.id.textView_quest_item_name;
-    private static final int DEFAULT_APP_PADDING = R.dimen.marginPadding;
 
     private List<QuestItem> items;
     private Context context;
@@ -99,7 +99,7 @@ public class ListAdapterAllQuests extends BaseAdapter{
 
         textView.setText(questItem.getName());
         textView.setCompoundDrawablePadding(
-                Float.valueOf(context.getResources().getDimension(DEFAULT_APP_PADDING)).intValue());
+                Float.valueOf(context.getResources().getDimension(MainActivity.DEFAULT_APP_PADDING)).intValue());
         if (questItem.getAvatarBitmap() != null){
             textView.setCompoundDrawablesWithIntrinsicBounds(
                     new BitmapDrawable(context.getResources(), questItem.getAvatarBitmap()),
