@@ -1,7 +1,9 @@
 package com.android.androiddevteam.quest.fragment.quest_list;
 
 import android.app.ActionBar;
+import android.app.Activity;
 import android.content.Intent;
+import android.database.Cursor;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
@@ -10,16 +12,19 @@ import android.view.View;
 import android.widget.*;
 import com.android.androiddevteam.quest.R;
 import com.android.androiddevteam.quest.activity.ActNewQuest;
-import com.android.androiddevteam.quest.adapter.ListAdapterAllQuests;
-import com.android.androiddevteam.quest.bundle.BundleExtras;
+import com.android.androiddevteam.quest.activity.BaseAbstractFragmentActivity;
+import com.android.androiddevteam.quest.adapter.CustomSimpleCursorAdapter;
+import com.android.androiddevteam.quest.adapter.binder.QuestItemBinder;
+import com.android.androiddevteam.quest.constants.BUNDLE;
+import com.android.androiddevteam.quest.constants.REQUEST_CODES;
+import com.android.androiddevteam.quest.database.DataAdapter;
+import com.android.androiddevteam.quest.database.DataBaseHelper;
+import com.android.androiddevteam.quest.dialogfragments.dialog_ok_cancel.DlgFragClearDatabase;
 import com.android.androiddevteam.quest.fragment.FragBaseAbstract;
-import com.android.androiddevteam.quest.structure.QuestItem;
 import com.android.zeus.ui.floating_button.FloatingActionButton;
 import com.android.zeus.ui.floating_button.ShowHideOnScroll;
 
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.List;
+import java.io.IOException;
 
 /**
  * Project: Quest
@@ -31,20 +36,19 @@ public class FragAllQuests extends FragBaseAbstract
         implements AdapterView.OnItemClickListener, View.OnClickListener, SwipeRefreshLayout.OnRefreshListener {
 
     private static final int ROOT_LAYOUT_ID = R.layout.frag_quests;
+    private static final int ACTION_BAR_LAYOUT_ID = R.layout.action_bar_act_main;
     private static final int LIST_VIEW_ID = R.id.listView_quests_list;
     private static final int NEW_QUEST_ID = R.id.floatButton_new_quest;
+    private static final int CLEAR_DB_ID = R.id.imageButton_clear_db;
+    private static final int ACTION_BAR_TITLE_ID = R.id.textView_title;
     private static final int SWIPE_REFRESH_LIST_ID = R.id.swipe_refresh_new_quest;
+    private static final int ITEM_LAYOUT_ID = R.layout.adapter_item_quest;
+    private static final int QUEST_NAME_AVATAR_ID = R.id.textView_quest_item_name;
+
     private static final String TAG = "FragAllQuests";
     private static final String TITLE = "All quests";
 
-    @Deprecated
     private static final String REFRESH_MESSAGE = "Refreshing";
-
-    @Deprecated
-    private static final int DEF_QUEST_DRAWABLE_ID = R.drawable.ic_launcher;
-
-    @Deprecated
-    private static final int DEF_QUEST_ITEMS_COUNT = 100;
 
     private SwipeRefreshLayout swipeRefreshLayout;
     private ListView questsListView;
@@ -106,10 +110,11 @@ public class FragAllQuests extends FragBaseAbstract
     @Override
     protected void customizeActionBar(ActionBar actionBar) {
         if (actionBar != null) {
-            actionBar.setCustomView(R.layout.action_bar_base);
+            actionBar.setCustomView(ACTION_BAR_LAYOUT_ID);
             actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
-            ((TextView)actionBar.getCustomView().findViewById(R.id.textView_title))
+            ((TextView)actionBar.getCustomView().findViewById(ACTION_BAR_TITLE_ID))
                     .setText(getFragmentTitle());
+            actionBar.getCustomView().findViewById(CLEAR_DB_ID).setOnClickListener(this);
         }
     }
 
@@ -136,17 +141,28 @@ public class FragAllQuests extends FragBaseAbstract
     }
 
     private BaseAdapter getAdapter(){
-        List<QuestItem> questItems = new ArrayList<>();
-        for (int i = 0; i < DEF_QUEST_ITEMS_COUNT; ++i){
-            QuestItem questItem = new QuestItem("Quest #" + (i + DEF_QUEST_ITEMS_COUNT), DEF_QUEST_DRAWABLE_ID);
-            questItem.setTime(Long.valueOf(System.nanoTime()).toString());
-            questItem.setDate(Integer.valueOf(Calendar.getInstance().getTime().getDate()).toString());
-            questItem.setCreator("#" + (i + DEF_QUEST_ITEMS_COUNT));
-            questItem.setPrize(Integer.valueOf((i + DEF_QUEST_ITEMS_COUNT)).toString());
+        CustomSimpleCursorAdapter cursorAdapter = new CustomSimpleCursorAdapter(getActivity(),
+                ITEM_LAYOUT_ID,
+                ((BaseAbstractFragmentActivity) getActivity()).getDataAdapter().getQuests(),
+                new String[]{DataAdapter.QUEST_NAME_STRING, DataAdapter.QUEST_AVATAR_BLOB},
+                new int[]{QUEST_NAME_AVATAR_ID, QUEST_NAME_AVATAR_ID},
+                CursorAdapter.FLAG_REGISTER_CONTENT_OBSERVER);
 
-            questItems.add(questItem);
-        }
-        return new ListAdapterAllQuests(getActivity(), questItems);
+//        List<QuestItem> questItems = new ArrayList<>();
+//        for (int i = 0; i < DEF_QUEST_ITEMS_COUNT; ++i){
+//            QuestItem questItem = new QuestItem("Quest #" + (i + DEF_QUEST_ITEMS_COUNT), DEF_QUEST_DRAWABLE_ID);
+//            questItem.setTime(Long.valueOf(System.nanoTime()).toString());
+//            questItem.setDate(Integer.valueOf(Calendar.getInstance().getTime().getDate()).toString());
+//            questItem.setCreator("#" + (i + DEF_QUEST_ITEMS_COUNT));
+//            questItem.setPrize(Integer.valueOf((i + DEF_QUEST_ITEMS_COUNT)).toString());
+//
+//            questItems.add(questItem);
+//        }
+//        return new ListAdapterAllQuests(getActivity(), questItems);
+
+        cursorAdapter.setViewBinder(new QuestItemBinder(getActivity()));
+
+        return cursorAdapter;
     }
 
     /**
@@ -164,14 +180,21 @@ public class FragAllQuests extends FragBaseAbstract
      */
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        QuestItem questItem = ((QuestItem) parent.getAdapter().getItem(position));
+        Cursor itemCursor = ((Cursor) parent.getAdapter().getItem(position));
 
         Bundle bundle = new Bundle();
-        bundle.putString(BundleExtras.FRAG_QUEST_QUEST_NAME_STRING, questItem.getName());
-        bundle.putString(BundleExtras.FRAG_QUEST_QUEST_TIME_STRING, questItem.getTime());
-        bundle.putString(BundleExtras.FRAG_QUEST_QUEST_DATE_STRING, questItem.getDate());
-        bundle.putString(BundleExtras.FRAG_QUEST_QUEST_CREATOR_STRING, questItem.getCreator());
-        bundle.putString(BundleExtras.FRAG_QUEST_QUEST_PRIZE_STRING, questItem.getPrize());
+        bundle.putString(BUNDLE.STRING.QUEST_NAME,
+                getStringFromCursor(itemCursor, DataAdapter.QUEST_NAME_STRING));
+        bundle.putString(BUNDLE.STRING.QUEST_TIME,
+                getStringFromCursor(itemCursor, DataAdapter.QUEST_TIME_STRING));
+        bundle.putString(BUNDLE.STRING.QUEST_DATE,
+                getStringFromCursor(itemCursor, DataAdapter.QUEST_DATE_STRING));
+        bundle.putString(BUNDLE.STRING.QUEST_CREATOR,
+                getStringFromCursor(itemCursor, DataAdapter.QUEST_CREATOR_STRING));
+        bundle.putString(BUNDLE.STRING.QUEST_PRIZE, getStringFromCursor(itemCursor,
+                DataAdapter.QUEST_PRIZE_STRING));
+
+        itemCursor.close();
 
         FragQuest fragQuest = new FragQuest();
         fragQuest.setArguments(bundle);
@@ -191,8 +214,46 @@ public class FragAllQuests extends FragBaseAbstract
                 Intent intent = new Intent(getActivity(), ActNewQuest.class);
                 startActivity(intent);
                 break;
+            case CLEAR_DB_ID:
+                askForActionWithDb();
+                break;
             default:
                 break;
+        }
+    }
+
+    private void askForActionWithDb(){
+        DlgFragClearDatabase fragClearDatabase = new DlgFragClearDatabase();
+        fragClearDatabase.setTargetFragment(FragAllQuests.this, REQUEST_CODES.CLEAR_DATABASE);
+        fragClearDatabase.show(getFragmentManager(), fragClearDatabase.getDialogTag());
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        switch (resultCode){
+            case Activity.RESULT_OK:
+                switch (requestCode){
+                    case REQUEST_CODES.CLEAR_DATABASE:
+                        clearCreateDB();
+                        break;
+                    default:
+                        break;
+                }
+                break;
+            default:
+                break;
+        }
+    }
+
+    private void clearCreateDB(){
+        DataBaseHelper dataBaseHelper = new DataBaseHelper(getActivity());
+        try {
+            dataBaseHelper.createDataBase();
+            dataBaseHelper.openDataBase();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 

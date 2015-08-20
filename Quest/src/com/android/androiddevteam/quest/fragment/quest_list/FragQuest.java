@@ -5,7 +5,7 @@ import android.support.v4.app.FragmentManager;
 import android.view.View;
 import android.widget.TextView;
 import com.android.androiddevteam.quest.R;
-import com.android.androiddevteam.quest.bundle.BundleExtras;
+import com.android.androiddevteam.quest.constants.BUNDLE;
 import com.android.androiddevteam.quest.fragment.FragBaseAbstract;
 
 /**
@@ -45,8 +45,8 @@ public class FragQuest extends FragBaseAbstract {
     @Override
     public String getFragmentTitle() {
         if (getArguments() != null
-                && getArguments().getString(BundleExtras.FRAG_QUEST_QUEST_NAME_STRING) != null){
-            return getArguments().getString(BundleExtras.FRAG_QUEST_QUEST_NAME_STRING);
+                && getArguments().getString(BUNDLE.STRING.QUEST_NAME) != null){
+            return getArguments().getString(BUNDLE.STRING.QUEST_NAME);
         } else {
             return TITLE;
         }
@@ -96,16 +96,16 @@ public class FragQuest extends FragBaseAbstract {
     @Override
     protected void customizeViews(View rootView) {
         if (getArguments() != null){
-            String time = getArguments().getString(BundleExtras.FRAG_QUEST_QUEST_TIME_STRING);
+            String time = getArguments().getString(BUNDLE.STRING.QUEST_TIME);
             if (time != null) ((TextView) rootView.findViewById(QUEST_TIME_ID)).setText(time);
 
-            String date = getArguments().getString(BundleExtras.FRAG_QUEST_QUEST_DATE_STRING);
+            String date = getArguments().getString(BUNDLE.STRING.QUEST_DATE);
             if (date != null) ((TextView) rootView.findViewById(QUEST_DATE_ID)).setText(date);
 
-            String creator = getArguments().getString(BundleExtras.FRAG_QUEST_QUEST_CREATOR_STRING);
+            String creator = getArguments().getString(BUNDLE.STRING.QUEST_CREATOR);
             if (creator != null) ((TextView) rootView.findViewById(QUEST_CREATOR_ID)).setText(creator);
 
-            String prize = getArguments().getString(BundleExtras.FRAG_QUEST_QUEST_PRIZE_STRING);
+            String prize = getArguments().getString(BUNDLE.STRING.QUEST_PRIZE);
             if (prize != null) ((TextView) rootView.findViewById(QUEST_PRIZE_ID)).setText(prize);
         }
     }

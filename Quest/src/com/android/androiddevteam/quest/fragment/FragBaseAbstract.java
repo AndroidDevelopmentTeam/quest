@@ -1,6 +1,7 @@
 package com.android.androiddevteam.quest.fragment;
 
 import android.app.ActionBar;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -92,5 +93,13 @@ public abstract class FragBaseAbstract extends Fragment{
                 .replace(containerId, fragment)
                 .addToBackStack(fragment.getFragmentTag())
                 .commit();
+    }
+
+    protected String getStringFromCursor(Cursor cursor, String columnName){
+        return cursor.getString(cursor.getColumnIndex(columnName));
+    }
+
+    protected int getIntFromCursor(Cursor cursor, String columnName){
+        return cursor.getInt(cursor.getColumnIndex(columnName));
     }
 }

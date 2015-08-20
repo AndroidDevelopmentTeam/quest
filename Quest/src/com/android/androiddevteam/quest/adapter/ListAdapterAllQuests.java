@@ -99,7 +99,7 @@ public class ListAdapterAllQuests extends BaseAdapter{
 
         textView.setText(questItem.getName());
         textView.setCompoundDrawablePadding(
-                Float.valueOf(context.getResources().getDimension(MainActivity.DEFAULT_APP_PADDING)).intValue());
+                MainActivity.getDefaultAppPaddingInt());
         if (questItem.getAvatarBitmap() != null){
             textView.setCompoundDrawablesWithIntrinsicBounds(
                     new BitmapDrawable(context.getResources(), questItem.getAvatarBitmap()),

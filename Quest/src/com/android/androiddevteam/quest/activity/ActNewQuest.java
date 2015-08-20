@@ -49,6 +49,36 @@ public class ActNewQuest extends BaseAbstractFragmentActivity
     private int mainDistance = 0;
 
     @Override
+    protected void actionsBeforeParentResume() {
+
+    }
+
+    @Override
+    protected void actionsAfterParentResume() {
+
+    }
+
+    @Override
+    protected void actionsBeforeParentPause() {
+
+    }
+
+    @Override
+    protected void actionsAfterParentPause() {
+
+    }
+
+    @Override
+    protected void actionsBeforeParentStop() {
+
+    }
+
+    @Override
+    protected void actionsAfterParentStop() {
+
+    }
+
+    @Override
     protected int getFragmentContainerId() {
         return 0;
     }
@@ -126,21 +156,6 @@ public class ActNewQuest extends BaseAbstractFragmentActivity
 
         ((TextView) handleLayout.findViewById(HANDLE_DISTANCE_MAIN_ID))
                 .setText(mainDistance + GoogleMapManager.METERS);
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
     }
 
     @Override
