@@ -19,550 +19,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2177c75d-12ef-4c0b-b6e0-16298dfe3839" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/.idea/.name" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/.idea/compiler.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/.idea/copyright/profiles_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/.idea/dataSources.ids" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/.idea/dataSources.local.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/.idea/dataSources.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/.idea/dictionaries/priadko.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/.idea/libraries/designLibs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/.idea/libraries/google_play_services.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/.idea/libraries/questlibs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/.idea/uiDesigner.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/.idea/vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/AndroidManifest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/Quest.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/ant.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/assets/questDB" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/build.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/libs/android-support-v4.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/libs/android-support-v7-appcompat.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/proguard-project.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/project.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/drawable-hdpi/btn_green_hover.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/drawable-hdpi/btn_green_normal.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/drawable-hdpi/ic_action_accept.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/drawable-hdpi/ic_action_cancel.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/drawable-hdpi/ic_action_discard.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/drawable-hdpi/ic_action_location_found.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/drawable-hdpi/ic_action_new.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/drawable-hdpi/ic_action_place.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/drawable-hdpi/ic_action_search.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/drawable-hdpi/ic_action_web_site.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/drawable-hdpi/ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/drawable-ldpi/ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/drawable-mdpi/btn_green_hover.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/drawable-mdpi/btn_green_normal.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/drawable-mdpi/ic_action_accept.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/drawable-mdpi/ic_action_cancel.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/drawable-mdpi/ic_action_discard.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/drawable-mdpi/ic_action_location_found.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/drawable-mdpi/ic_action_new.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/drawable-mdpi/ic_action_place.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/drawable-mdpi/ic_action_search.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/drawable-mdpi/ic_action_web_site.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/drawable-mdpi/ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/drawable-xhdpi/btn_green_hover.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/drawable-xhdpi/btn_green_normal.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/drawable-xhdpi/ic_action_accept.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/drawable-xhdpi/ic_action_cancel.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/drawable-xhdpi/ic_action_discard.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/drawable-xhdpi/ic_action_location_found.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/drawable-xhdpi/ic_action_new.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/drawable-xhdpi/ic_action_place.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/drawable-xhdpi/ic_action_search.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/drawable-xhdpi/ic_action_web_site.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/drawable-xxhdpi/btn_green_hover.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/drawable-xxhdpi/btn_green_normal.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/drawable-xxhdpi/ic_action_accept.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/drawable-xxhdpi/ic_action_cancel.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/drawable-xxhdpi/ic_action_discard.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/drawable-xxhdpi/ic_action_location_found.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/drawable-xxhdpi/ic_action_new.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/drawable-xxhdpi/ic_action_place.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/drawable-xxhdpi/ic_action_search.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/drawable-xxhdpi/ic_action_web_site.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/drawable/layer_list_def_white.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/drawable/selector_bttn_green.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/drawable/selector_switch_thumb.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/layout/act_main.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/layout/act_new_quest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/layout/action_bar_act_main.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/layout/action_bar_act_new_quest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/layout/action_bar_base.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/layout/action_bar_frag_quest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/layout/adapter_item_distance.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/layout/adapter_item_point.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/layout/adapter_item_quest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/layout/dialog_deadline.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/layout/dialog_deadline_title.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/layout/dialog_exception.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/layout/dialog_get_date.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/layout/dialog_get_time.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/layout/dialog_message.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/layout/dialog_states.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/layout/frag_new_quest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/layout/frag_quest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/layout/frag_quests.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/values/dimens.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/res/values/strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/src/com/android/androiddevteam/quest/activity/ActNewQuest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/src/com/android/androiddevteam/quest/activity/BaseAbstractFragmentActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/src/com/android/androiddevteam/quest/activity/MainActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/src/com/android/androiddevteam/quest/adapter/ListAdapterAllPoints.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/src/com/android/androiddevteam/quest/adapter/ListAdapterAllQuests.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/src/com/android/androiddevteam/quest/adapter/binder/BaseAbstractBinder.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/src/com/android/androiddevteam/quest/adapter/binder/BaseViewBinder.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/src/com/android/androiddevteam/quest/adapter/binder/QuestItemBinder.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/src/com/android/androiddevteam/quest/constants/BUNDLE.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/src/com/android/androiddevteam/quest/constants/REQUEST_CODES.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/src/com/android/androiddevteam/quest/database/DataAdapter.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/src/com/android/androiddevteam/quest/database/DataBaseHelper.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/src/com/android/androiddevteam/quest/dialogfragments/DlgFragAbstractOk.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/src/com/android/androiddevteam/quest/dialogfragments/DlgFragAbstractOkCancel.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/src/com/android/androiddevteam/quest/dialogfragments/DlgFragBase.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/src/com/android/androiddevteam/quest/dialogfragments/dialog_ok/DlgFragException.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/src/com/android/androiddevteam/quest/dialogfragments/dialog_ok/DlgFragTitle.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/src/com/android/androiddevteam/quest/dialogfragments/dialog_ok/DlgFragTitleMessage.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/src/com/android/androiddevteam/quest/dialogfragments/dialog_ok_cancel/DlgFragCancel.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/src/com/android/androiddevteam/quest/dialogfragments/dialog_ok_cancel/DlgFragClearDatabase.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/src/com/android/androiddevteam/quest/dialogfragments/dialog_ok_cancel/DlgFragDeadline.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/src/com/android/androiddevteam/quest/dialogfragments/dialog_ok_cancel/DlgFragGetDate.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/src/com/android/androiddevteam/quest/dialogfragments/dialog_ok_cancel/DlgFragGetTime.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/src/com/android/androiddevteam/quest/dialogfragments/dialog_ok_cancel/dialog_list_view/DlgFragAbstractListView.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/src/com/android/androiddevteam/quest/dialogfragments/dialog_ok_cancel/dialog_list_view/DlgFragChooseAccountState.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/src/com/android/androiddevteam/quest/fragment/FragBaseAbstract.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/src/com/android/androiddevteam/quest/fragment/quest_list/FragAllQuests.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/src/com/android/androiddevteam/quest/fragment/quest_list/FragQuest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/src/com/android/androiddevteam/quest/google_map/GoogleMapManager.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/src/com/android/androiddevteam/quest/structure/PointItem.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Quest/src/com/android/androiddevteam/quest/structure/QuestItem.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/androidmapsutils/build.gradle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/androidmapsutils2/src/main/AndroidManifest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/androidmapsutils2/src/main/java/com/google/maps/android/MarkerManager.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/androidmapsutils2/src/main/java/com/google/maps/android/MathUtil.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/androidmapsutils2/src/main/java/com/google/maps/android/PolyUtil.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/androidmapsutils2/src/main/java/com/google/maps/android/SphericalUtil.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/androidmapsutils2/src/main/java/com/google/maps/android/clustering/Cluster.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/androidmapsutils2/src/main/java/com/google/maps/android/clustering/ClusterItem.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/androidmapsutils2/src/main/java/com/google/maps/android/clustering/ClusterManager.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/androidmapsutils2/src/main/java/com/google/maps/android/clustering/algo/Algorithm.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/androidmapsutils2/src/main/java/com/google/maps/android/clustering/algo/GridBasedAlgorithm.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/androidmapsutils2/src/main/java/com/google/maps/android/clustering/algo/NonHierarchicalDistanceBasedAlgorithm.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/androidmapsutils2/src/main/java/com/google/maps/android/clustering/algo/PreCachingAlgorithmDecorator.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/androidmapsutils2/src/main/java/com/google/maps/android/clustering/algo/StaticCluster.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/androidmapsutils2/src/main/java/com/google/maps/android/clustering/view/ClusterRenderer.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/androidmapsutils2/src/main/java/com/google/maps/android/clustering/view/DefaultClusterRenderer.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/androidmapsutils2/src/main/java/com/google/maps/android/geometry/Bounds.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/androidmapsutils2/src/main/java/com/google/maps/android/geometry/Point.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/androidmapsutils2/src/main/java/com/google/maps/android/heatmaps/Gradient.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/androidmapsutils2/src/main/java/com/google/maps/android/heatmaps/HeatmapTileProvider.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/androidmapsutils2/src/main/java/com/google/maps/android/heatmaps/WeightedLatLng.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/androidmapsutils2/src/main/java/com/google/maps/android/projection/Point.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/androidmapsutils2/src/main/java/com/google/maps/android/projection/SphericalMercatorProjection.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/androidmapsutils2/src/main/java/com/google/maps/android/quadtree/PointQuadTree.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/androidmapsutils2/src/main/java/com/google/maps/android/ui/BubbleDrawable.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/androidmapsutils2/src/main/java/com/google/maps/android/ui/BubbleIconFactory.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/androidmapsutils2/src/main/java/com/google/maps/android/ui/IconGenerator.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/androidmapsutils2/src/main/java/com/google/maps/android/ui/RotationLayout.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/androidmapsutils2/src/main/java/com/google/maps/android/ui/SquareTextView.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/androidmapsutils2/src/main/res/drawable-xhdpi/bubble_mask.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/androidmapsutils2/src/main/res/drawable-xhdpi/bubble_shadow.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/androidmapsutils2/src/main/res/drawable-xxhdpi/bubble_mask.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/androidmapsutils2/src/main/res/drawable-xxhdpi/bubble_shadow.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/androidmapsutils2/src/main/res/layout/text_bubble.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/androidmapsutils2/src/main/res/values/ids.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/androidmapsutils2/src/main/res/values/styles.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/androidmaputils/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/androidmaputils/androidmaputils.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/androidmaputils/build.gradle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/androidmaputils/proguard-rules.pro" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/androidmaputils/src/androidTest/java/com/google/maps/android/ApplicationTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/androidmaputils/src/main/AndroidManifest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/androidmaputils/src/main/res/values/strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../android-maps-utils/.classpath" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../android-maps-utils/.project" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../android-maps-utils/AndroidManifest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../android-maps-utils/android-maps-utils.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../android-maps-utils/project.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../android-maps-utils/res/drawable-xhdpi/bubble_mask.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../android-maps-utils/res/drawable-xhdpi/bubble_shadow.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../android-maps-utils/res/drawable-xxhdpi/bubble_mask.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../android-maps-utils/res/drawable-xxhdpi/bubble_shadow.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../android-maps-utils/res/layout/text_bubble.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../android-maps-utils/res/values/ids.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../android-maps-utils/res/values/styles.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../android-maps-utils/src/com/google/maps/android/MarkerManager.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../android-maps-utils/src/com/google/maps/android/MathUtil.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../android-maps-utils/src/com/google/maps/android/PolyUtil.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../android-maps-utils/src/com/google/maps/android/SphericalUtil.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../android-maps-utils/src/com/google/maps/android/clustering/Cluster.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../android-maps-utils/src/com/google/maps/android/clustering/ClusterItem.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../android-maps-utils/src/com/google/maps/android/clustering/ClusterManager.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../android-maps-utils/src/com/google/maps/android/clustering/algo/Algorithm.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../android-maps-utils/src/com/google/maps/android/clustering/algo/GridBasedAlgorithm.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../android-maps-utils/src/com/google/maps/android/clustering/algo/NonHierarchicalDistanceBasedAlgorithm.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../android-maps-utils/src/com/google/maps/android/clustering/algo/PreCachingAlgorithmDecorator.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../android-maps-utils/src/com/google/maps/android/clustering/algo/StaticCluster.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../android-maps-utils/src/com/google/maps/android/clustering/view/ClusterRenderer.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../android-maps-utils/src/com/google/maps/android/clustering/view/DefaultClusterRenderer.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../android-maps-utils/src/com/google/maps/android/geometry/Bounds.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../android-maps-utils/src/com/google/maps/android/geometry/Point.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../android-maps-utils/src/com/google/maps/android/heatmaps/Gradient.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../android-maps-utils/src/com/google/maps/android/heatmaps/HeatmapTileProvider.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../android-maps-utils/src/com/google/maps/android/heatmaps/WeightedLatLng.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../android-maps-utils/src/com/google/maps/android/projection/Point.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../android-maps-utils/src/com/google/maps/android/projection/SphericalMercatorProjection.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../android-maps-utils/src/com/google/maps/android/quadtree/PointQuadTree.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../android-maps-utils/src/com/google/maps/android/ui/BubbleDrawable.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../android-maps-utils/src/com/google/maps/android/ui/BubbleIconFactory.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../android-maps-utils/src/com/google/maps/android/ui/IconGenerator.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../android-maps-utils/src/com/google/maps/android/ui/RotationLayout.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../android-maps-utils/src/com/google/maps/android/ui/SquareTextView.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/.classpath" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/.project" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/.settings/org.eclipse.jdt.core.prefs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/AndroidManifest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/README.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/build.gradle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/google-play-services_lib.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/libs/google-play-services.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/libs/google-play-services.jar.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/proguard.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/project.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/color/common_signin_btn_text_dark.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/color/common_signin_btn_text_light.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/color/wallet_primary_text_holo_light.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/color/wallet_secondary_text_holo_dark.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-hdpi/common_full_open_on_phone.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-hdpi/common_ic_googleplayservices.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-hdpi/common_signin_btn_icon_disabled_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-hdpi/common_signin_btn_icon_disabled_focus_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-hdpi/common_signin_btn_icon_disabled_focus_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-hdpi/common_signin_btn_icon_disabled_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-hdpi/common_signin_btn_icon_focus_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-hdpi/common_signin_btn_icon_focus_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-hdpi/common_signin_btn_icon_normal_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-hdpi/common_signin_btn_icon_normal_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-hdpi/common_signin_btn_icon_pressed_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-hdpi/common_signin_btn_icon_pressed_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-hdpi/common_signin_btn_text_disabled_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-hdpi/common_signin_btn_text_disabled_focus_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-hdpi/common_signin_btn_text_disabled_focus_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-hdpi/common_signin_btn_text_disabled_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-hdpi/common_signin_btn_text_focus_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-hdpi/common_signin_btn_text_focus_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-hdpi/common_signin_btn_text_normal_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-hdpi/common_signin_btn_text_normal_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-hdpi/common_signin_btn_text_pressed_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-hdpi/common_signin_btn_text_pressed_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-hdpi/ic_plusone_medium_off_client.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-hdpi/ic_plusone_small_off_client.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-hdpi/ic_plusone_standard_off_client.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-hdpi/ic_plusone_tall_off_client.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-hdpi/powered_by_google_dark.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-hdpi/powered_by_google_light.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-mdpi/common_signin_btn_icon_disabled_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-mdpi/common_signin_btn_icon_disabled_focus_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-mdpi/common_signin_btn_icon_disabled_focus_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-mdpi/common_signin_btn_icon_disabled_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-mdpi/common_signin_btn_icon_focus_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-mdpi/common_signin_btn_icon_focus_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-mdpi/common_signin_btn_icon_normal_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-mdpi/common_signin_btn_icon_normal_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-mdpi/common_signin_btn_icon_pressed_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-mdpi/common_signin_btn_icon_pressed_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-mdpi/common_signin_btn_text_disabled_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-mdpi/common_signin_btn_text_disabled_focus_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-mdpi/common_signin_btn_text_disabled_focus_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-mdpi/common_signin_btn_text_disabled_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-mdpi/common_signin_btn_text_focus_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-mdpi/common_signin_btn_text_focus_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-mdpi/common_signin_btn_text_normal_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-mdpi/common_signin_btn_text_normal_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-mdpi/common_signin_btn_text_pressed_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-mdpi/common_signin_btn_text_pressed_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-mdpi/ic_plusone_medium_off_client.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-mdpi/ic_plusone_small_off_client.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-mdpi/ic_plusone_standard_off_client.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-mdpi/ic_plusone_tall_off_client.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-mdpi/powered_by_google_dark.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-mdpi/powered_by_google_light.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-tvdpi/ic_plusone_medium_off_client.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-tvdpi/ic_plusone_small_off_client.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-tvdpi/ic_plusone_standard_off_client.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-tvdpi/ic_plusone_tall_off_client.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-xhdpi/common_signin_btn_icon_disabled_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-xhdpi/common_signin_btn_icon_disabled_focus_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-xhdpi/common_signin_btn_icon_disabled_focus_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-xhdpi/common_signin_btn_icon_disabled_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-xhdpi/common_signin_btn_icon_focus_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-xhdpi/common_signin_btn_icon_focus_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-xhdpi/common_signin_btn_icon_normal_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-xhdpi/common_signin_btn_icon_normal_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-xhdpi/common_signin_btn_icon_pressed_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-xhdpi/common_signin_btn_icon_pressed_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-xhdpi/common_signin_btn_text_disabled_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-xhdpi/common_signin_btn_text_disabled_focus_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-xhdpi/common_signin_btn_text_disabled_focus_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-xhdpi/common_signin_btn_text_disabled_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-xhdpi/common_signin_btn_text_focus_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-xhdpi/common_signin_btn_text_focus_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-xhdpi/common_signin_btn_text_normal_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-xhdpi/common_signin_btn_text_normal_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-xhdpi/common_signin_btn_text_pressed_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-xhdpi/common_signin_btn_text_pressed_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-xhdpi/ic_plusone_medium_off_client.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-xhdpi/ic_plusone_small_off_client.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-xhdpi/ic_plusone_standard_off_client.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-xhdpi/ic_plusone_tall_off_client.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-xhdpi/powered_by_google_dark.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-xhdpi/powered_by_google_light.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-xxhdpi/common_signin_btn_icon_disabled_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-xxhdpi/common_signin_btn_icon_disabled_focus_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-xxhdpi/common_signin_btn_icon_disabled_focus_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-xxhdpi/common_signin_btn_icon_disabled_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-xxhdpi/common_signin_btn_icon_focus_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-xxhdpi/common_signin_btn_icon_focus_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-xxhdpi/common_signin_btn_icon_normal_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-xxhdpi/common_signin_btn_icon_normal_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-xxhdpi/common_signin_btn_icon_pressed_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-xxhdpi/common_signin_btn_icon_pressed_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-xxhdpi/common_signin_btn_text_disabled_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-xxhdpi/common_signin_btn_text_disabled_focus_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-xxhdpi/common_signin_btn_text_disabled_focus_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-xxhdpi/common_signin_btn_text_disabled_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-xxhdpi/common_signin_btn_text_focus_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-xxhdpi/common_signin_btn_text_focus_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-xxhdpi/common_signin_btn_text_normal_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-xxhdpi/common_signin_btn_text_normal_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-xxhdpi/common_signin_btn_text_pressed_dark.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-xxhdpi/common_signin_btn_text_pressed_light.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-xxhdpi/ic_plusone_medium_off_client.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-xxhdpi/ic_plusone_small_off_client.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-xxhdpi/ic_plusone_standard_off_client.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-xxhdpi/ic_plusone_tall_off_client.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-xxhdpi/powered_by_google_dark.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable-xxhdpi/powered_by_google_light.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable/common_signin_btn_icon_dark.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable/common_signin_btn_icon_light.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable/common_signin_btn_text_dark.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/drawable/common_signin_btn_text_light.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/raw/gtm_analytics" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-af/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-am/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-ar/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-bg/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-bn-rBD/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-ca/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-cs/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-da/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-de/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-el/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-en-rGB/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-en-rIN/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-es-rUS/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-es/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-es/wallet_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-et-rEE/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-eu-rES/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-fa/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-fi/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-fr-rCA/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-fr/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-gl-rES/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-hi/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-hr/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-hu/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-hy-rAM/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-in/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-is-rIS/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-it/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-iw/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-ja/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-ka-rGE/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-kk-rKZ/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-km-rKH/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-kn-rIN/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-ko/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-ky-rKG/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-lo-rLA/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-lt/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-lv/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-mk-rMK/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-ml-rIN/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-mn-rMN/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-mr-rIN/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-ms-rMY/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-my-rMM/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-nb/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-ne-rNP/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-nl/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-pl/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-pt-rBR/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-pt-rPT/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-pt/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-ro/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-ru/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-si-rLK/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-sk/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-sl/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-sr/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-sv/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-sw/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-ta-rIN/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-te-rIN/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-th/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-tl/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-tr/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-uk/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-ur-rPK/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-uz-rUZ/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-vi/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-zh-rCN/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-zh-rHK/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-zh-rTW/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values-zu/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values/admob_ads_attrs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values/admob_iap_style.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values/admob_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values/common_attrs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values/common_colors.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values/common_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values/maps_attrs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values/version.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values/wallet_attrs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values/wallet_colors.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values/wallet_strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/res/values/wallet_styles.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../google-play-services_lib/src/android/UnusedStub.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../utils" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../volley/.classpath" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../volley/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../volley/.project" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../volley/.settings/org.eclipse.jdt.core.prefs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../volley/AndroidManifest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../volley/proguard-project.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../volley/proguard.cfg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../volley/project.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../volley/res/values/colors.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../volley/res/values/dimens.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../volley/res/values/strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../volley/src/com/android/volley/AuthFailureError.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../volley/src/com/android/volley/Cache.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../volley/src/com/android/volley/CacheDispatcher.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../volley/src/com/android/volley/DefaultRetryPolicy.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../volley/src/com/android/volley/ExecutorDelivery.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../volley/src/com/android/volley/Network.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../volley/src/com/android/volley/NetworkDispatcher.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../volley/src/com/android/volley/NetworkError.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../volley/src/com/android/volley/NetworkResponse.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../volley/src/com/android/volley/NoConnectionError.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../volley/src/com/android/volley/ParseError.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../volley/src/com/android/volley/Request.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../volley/src/com/android/volley/RequestQueue.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../volley/src/com/android/volley/Response.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../volley/src/com/android/volley/ResponseDelivery.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../volley/src/com/android/volley/RetryPolicy.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../volley/src/com/android/volley/ServerError.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../volley/src/com/android/volley/TimeoutError.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../volley/src/com/android/volley/VolleyError.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../volley/src/com/android/volley/VolleyLog.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../volley/src/com/android/volley/toolbox/AndroidAuthenticator.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../volley/src/com/android/volley/toolbox/Authenticator.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../volley/src/com/android/volley/toolbox/BasicNetwork.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../volley/src/com/android/volley/toolbox/ByteArrayPool.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../volley/src/com/android/volley/toolbox/ClearCacheRequest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../volley/src/com/android/volley/toolbox/DiskBasedCache.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../volley/src/com/android/volley/toolbox/HttpClientStack.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../volley/src/com/android/volley/toolbox/HttpHeaderParser.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../volley/src/com/android/volley/toolbox/HttpStack.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../volley/src/com/android/volley/toolbox/HurlStack.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../volley/src/com/android/volley/toolbox/ImageLoader.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../volley/src/com/android/volley/toolbox/ImageRequest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../volley/src/com/android/volley/toolbox/JsonArrayRequest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../volley/src/com/android/volley/toolbox/JsonObjectRequest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../volley/src/com/android/volley/toolbox/JsonRequest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../volley/src/com/android/volley/toolbox/NetworkImageView.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../volley/src/com/android/volley/toolbox/NoCache.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../volley/src/com/android/volley/toolbox/PoolingByteArrayOutputStream.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../volley/src/com/android/volley/toolbox/RequestFuture.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../volley/src/com/android/volley/toolbox/StringRequest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../volley/src/com/android/volley/toolbox/Volley.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../volley/volley.iml" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/androidmapsutils/androidmapsutils.iml" afterPath="$PROJECT_DIR$/androidMapUtils/android-map-utils.iml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/androidmapsutils/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/androidMapUtils/src/main/AndroidManifest.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/androidmapsutils/src/main/java/com/google/maps/android/MarkerManager.java" afterPath="$PROJECT_DIR$/androidMapUtils/src/main/java/com/google/maps/android/MarkerManager.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/androidmapsutils/src/main/java/com/google/maps/android/MathUtil.java" afterPath="$PROJECT_DIR$/androidMapUtils/src/main/java/com/google/maps/android/MathUtil.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/androidmapsutils/src/main/java/com/google/maps/android/PolyUtil.java" afterPath="$PROJECT_DIR$/androidMapUtils/src/main/java/com/google/maps/android/PolyUtil.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/androidmapsutils/src/main/java/com/google/maps/android/SphericalUtil.java" afterPath="$PROJECT_DIR$/androidMapUtils/src/main/java/com/google/maps/android/SphericalUtil.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/androidmapsutils/src/main/java/com/google/maps/android/clustering/Cluster.java" afterPath="$PROJECT_DIR$/androidMapUtils/src/main/java/com/google/maps/android/clustering/Cluster.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/androidmapsutils/src/main/java/com/google/maps/android/clustering/ClusterItem.java" afterPath="$PROJECT_DIR$/androidMapUtils/src/main/java/com/google/maps/android/clustering/ClusterItem.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/androidmapsutils/src/main/java/com/google/maps/android/clustering/ClusterManager.java" afterPath="$PROJECT_DIR$/androidMapUtils/src/main/java/com/google/maps/android/clustering/ClusterManager.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/androidmapsutils/src/main/java/com/google/maps/android/clustering/algo/Algorithm.java" afterPath="$PROJECT_DIR$/androidMapUtils/src/main/java/com/google/maps/android/clustering/algo/Algorithm.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/androidmapsutils/src/main/java/com/google/maps/android/clustering/algo/GridBasedAlgorithm.java" afterPath="$PROJECT_DIR$/androidMapUtils/src/main/java/com/google/maps/android/clustering/algo/GridBasedAlgorithm.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/androidmapsutils/src/main/java/com/google/maps/android/clustering/algo/NonHierarchicalDistanceBasedAlgorithm.java" afterPath="$PROJECT_DIR$/androidMapUtils/src/main/java/com/google/maps/android/clustering/algo/NonHierarchicalDistanceBasedAlgorithm.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/androidmapsutils/src/main/java/com/google/maps/android/clustering/algo/PreCachingAlgorithmDecorator.java" afterPath="$PROJECT_DIR$/androidMapUtils/src/main/java/com/google/maps/android/clustering/algo/PreCachingAlgorithmDecorator.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/androidmapsutils/src/main/java/com/google/maps/android/clustering/algo/StaticCluster.java" afterPath="$PROJECT_DIR$/androidMapUtils/src/main/java/com/google/maps/android/clustering/algo/StaticCluster.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/androidmapsutils/src/main/java/com/google/maps/android/clustering/view/ClusterRenderer.java" afterPath="$PROJECT_DIR$/androidMapUtils/src/main/java/com/google/maps/android/clustering/view/ClusterRenderer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/androidmapsutils/src/main/java/com/google/maps/android/clustering/view/DefaultClusterRenderer.java" afterPath="$PROJECT_DIR$/androidMapUtils/src/main/java/com/google/maps/android/clustering/view/DefaultClusterRenderer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/androidmapsutils/src/main/java/com/google/maps/android/geometry/Bounds.java" afterPath="$PROJECT_DIR$/androidMapUtils/src/main/java/com/google/maps/android/geometry/Bounds.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/androidmapsutils/src/main/java/com/google/maps/android/geometry/Point.java" afterPath="$PROJECT_DIR$/androidMapUtils/src/main/java/com/google/maps/android/geometry/Point.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/androidmapsutils/src/main/java/com/google/maps/android/heatmaps/Gradient.java" afterPath="$PROJECT_DIR$/androidMapUtils/src/main/java/com/google/maps/android/heatmaps/Gradient.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/androidmapsutils/src/main/java/com/google/maps/android/heatmaps/HeatmapTileProvider.java" afterPath="$PROJECT_DIR$/androidMapUtils/src/main/java/com/google/maps/android/heatmaps/HeatmapTileProvider.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/androidmapsutils/src/main/java/com/google/maps/android/heatmaps/WeightedLatLng.java" afterPath="$PROJECT_DIR$/androidMapUtils/src/main/java/com/google/maps/android/heatmaps/WeightedLatLng.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/androidmapsutils/src/main/java/com/google/maps/android/projection/Point.java" afterPath="$PROJECT_DIR$/androidMapUtils/src/main/java/com/google/maps/android/projection/Point.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/androidmapsutils/src/main/java/com/google/maps/android/projection/SphericalMercatorProjection.java" afterPath="$PROJECT_DIR$/androidMapUtils/src/main/java/com/google/maps/android/projection/SphericalMercatorProjection.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/androidmapsutils/src/main/java/com/google/maps/android/quadtree/PointQuadTree.java" afterPath="$PROJECT_DIR$/androidMapUtils/src/main/java/com/google/maps/android/quadtree/PointQuadTree.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/androidmapsutils/src/main/java/com/google/maps/android/ui/BubbleDrawable.java" afterPath="$PROJECT_DIR$/androidMapUtils/src/main/java/com/google/maps/android/ui/BubbleDrawable.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/androidmapsutils/src/main/java/com/google/maps/android/ui/BubbleIconFactory.java" afterPath="$PROJECT_DIR$/androidMapUtils/src/main/java/com/google/maps/android/ui/BubbleIconFactory.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/androidmapsutils/src/main/java/com/google/maps/android/ui/IconGenerator.java" afterPath="$PROJECT_DIR$/androidMapUtils/src/main/java/com/google/maps/android/ui/IconGenerator.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/androidmapsutils/src/main/java/com/google/maps/android/ui/RotationLayout.java" afterPath="$PROJECT_DIR$/androidMapUtils/src/main/java/com/google/maps/android/ui/RotationLayout.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/androidmapsutils/src/main/java/com/google/maps/android/ui/SquareTextView.java" afterPath="$PROJECT_DIR$/androidMapUtils/src/main/java/com/google/maps/android/ui/SquareTextView.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/androidmapsutils/src/main/res/drawable-xhdpi/bubble_mask.9.png" afterPath="$PROJECT_DIR$/androidMapUtils/src/main/res/drawable-xhdpi/bubble_mask.9.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/androidmapsutils/src/main/res/drawable-xhdpi/bubble_shadow.9.png" afterPath="$PROJECT_DIR$/androidMapUtils/src/main/res/drawable-xhdpi/bubble_shadow.9.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/androidmapsutils/src/main/res/drawable-xxhdpi/bubble_mask.9.png" afterPath="$PROJECT_DIR$/androidMapUtils/src/main/res/drawable-xxhdpi/bubble_mask.9.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/androidmapsutils/src/main/res/drawable-xxhdpi/bubble_shadow.9.png" afterPath="$PROJECT_DIR$/androidMapUtils/src/main/res/drawable-xxhdpi/bubble_shadow.9.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/androidmapsutils/src/main/res/layout/text_bubble.xml" afterPath="$PROJECT_DIR$/androidMapUtils/src/main/res/layout/text_bubble.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/androidmapsutils/src/main/res/values/ids.xml" afterPath="$PROJECT_DIR$/androidMapUtils/src/main/res/values/ids.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/androidmapsutils/src/main/res/values/styles.xml" afterPath="$PROJECT_DIR$/androidMapUtils/src/main/res/values/styles.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/androidmapsutils2/androidmapsutils2.iml" afterPath="$PROJECT_DIR$/androidMapUtils/androidmapsutils2.iml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/androidmapsutils2/build.gradle" afterPath="$PROJECT_DIR$/androidMapUtils/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_22_2_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_22_2_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/quest/build.gradle" afterPath="$PROJECT_DIR$/quest/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/design_23_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/design_23_0_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/mediarouter_v7_22_2_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/mediarouter_v7_22_2_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_7_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_7_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_ads_7_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_ads_7_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_analytics_7_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_analytics_7_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_appindexing_7_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_appindexing_7_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_appinvite_7_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_appinvite_7_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_appstate_7_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_appstate_7_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_base_7_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_base_7_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_cast_7_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_cast_7_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_drive_7_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_drive_7_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_fitness_7_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_fitness_7_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_games_7_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_games_7_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_gcm_7_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_gcm_7_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_identity_7_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_identity_7_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_location_7_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_location_7_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_maps_7_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_maps_7_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_nearby_7_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_nearby_7_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_panorama_7_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_panorama_7_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_plus_7_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_plus_7_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_safetynet_7_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_safetynet_7_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_vision_7_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_vision_7_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_wallet_7_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_wallet_7_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/play_services_wearable_7_8_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/play_services_wearable_7_8_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/quest/quest.iml" afterPath="$PROJECT_DIR$/quest/quest.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/settings.gradle" afterPath="$PROJECT_DIR$/settings.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_v4_22_2_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_v4_22_2_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Database/questDB" afterPath="$PROJECT_DIR$/../Database/questDB" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/quest/src/main/assets/questDB" afterPath="$PROJECT_DIR$/quest/src/main/assets/questDB" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/quest/src/main/java/com/android/androiddevteam/quest/activity/ActNewQuest.java" afterPath="$PROJECT_DIR$/quest/src/main/java/com/android/androiddevteam/quest/activity/ActNewQuest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/quest/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/quest/src/main/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/quest/src/main/java/com/android/androiddevteam/quest/activity/BaseAbstractFragmentActivity.java" afterPath="$PROJECT_DIR$/quest/src/main/java/com/android/androiddevteam/quest/activity/BaseAbstractFragmentActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/quest/src/main/java/com/android/androiddevteam/quest/fragment/quest_list/FragAllQuests.java" afterPath="$PROJECT_DIR$/quest/src/main/java/com/android/androiddevteam/quest/fragment/quest_list/FragAllQuests.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/quest/src/main/java/com/android/androiddevteam/quest/fragment/FragBaseAbstract.java" afterPath="$PROJECT_DIR$/quest/src/main/java/com/android/androiddevteam/quest/fragment/FragBaseAbstract.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/quest/src/main/java/com/android/androiddevteam/quest/fragment/quest_list/FragQuest.java" afterPath="$PROJECT_DIR$/quest/src/main/java/com/android/androiddevteam/quest/fragment/quest_list/FragQuest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/quest/src/main/res/layout/action_bar_act_main.xml" afterPath="$PROJECT_DIR$/quest/src/main/res/layout/action_bar_act_main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/quest/src/main/res/values/styles.xml" afterPath="$PROJECT_DIR$/quest/src/main/res/values/styles.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Quest.iws" />
@@ -591,21 +57,53 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/quest/build.gradle">
+      <file leaf-file-name="FragAllQuests.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/quest/src/main/java/com/android/androiddevteam/quest/fragment/quest_list/FragAllQuests.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+              <caret line="250" column="31" selection-start-line="250" selection-start-column="31" selection-end-line="250" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DataBaseHelper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/quest/src/main/java/com/android/androiddevteam/quest/database/DataBaseHelper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="43" column="16" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/androidMapUtils/build.gradle">
+      <file leaf-file-name="BaseAbstractFragmentActivity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/quest/src/main/java/com/android/androiddevteam/quest/activity/BaseAbstractFragmentActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.12027492">
-              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state vertical-scroll-proportion="-1.0927835">
+              <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DataAdapter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/quest/src/main/java/com/android/androiddevteam/quest/database/DataAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="42" column="23" selection-start-line="42" selection-start-column="23" selection-end-line="42" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="App.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/quest/src/main/java/com/android/androiddevteam/quest/structure/App.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -3966,16 +3464,19 @@
         <option value="$PROJECT_DIR$/quest/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.0/res/values-v23/values-v23.xml" />
         <option value="$PROJECT_DIR$/androidmapsutils2/build.gradle" />
         <option value="$PROJECT_DIR$/utils/build.gradle" />
-        <option value="$PROJECT_DIR$/quest/src/main/java/com/android/androiddevteam/quest/fragment/FragBaseAbstract.java" />
         <option value="$PROJECT_DIR$/quest/src/main/res/values/style.xml" />
-        <option value="$PROJECT_DIR$/quest/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/quest/src/main/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/quest/src/main/res/layout/frag_quests.xml" />
         <option value="$PROJECT_DIR$/quest/src/main/java/App.java" />
-        <option value="$PROJECT_DIR$/quest/src/main/java/com/android/androiddevteam/quest/activity/BaseAbstractFragmentActivity.java" />
-        <option value="$PROJECT_DIR$/quest/src/main/java/com/android/androiddevteam/quest/structure/App.java" />
-        <option value="$PROJECT_DIR$/quest/src/main/java/com/android/androiddevteam/quest/fragment/quest_list/FragAllQuests.java" />
         <option value="$PROJECT_DIR$/quest/build.gradle" />
+        <option value="$PROJECT_DIR$/quest/src/main/res/values/styles.xml" />
+        <option value="$PROJECT_DIR$/quest/src/main/java/com/android/androiddevteam/quest/fragment/FragBaseAbstract.java" />
+        <option value="$PROJECT_DIR$/quest/src/main/java/com/android/androiddevteam/quest/fragment/quest_list/FragQuest.java" />
+        <option value="$PROJECT_DIR$/quest/src/main/java/com/android/androiddevteam/quest/activity/ActNewQuest.java" />
+        <option value="$PROJECT_DIR$/quest/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/quest/src/main/res/layout/action_bar_act_main.xml" />
+        <option value="$PROJECT_DIR$/quest/src/main/java/com/android/androiddevteam/quest/fragment/quest_list/FragAllQuests.java" />
+        <option value="$PROJECT_DIR$/quest/src/main/java/com/android/androiddevteam/quest/structure/App.java" />
+        <option value="$PROJECT_DIR$/quest/src/main/java/com/android/androiddevteam/quest/activity/BaseAbstractFragmentActivity.java" />
       </list>
     </option>
   </component>
@@ -4040,7 +3541,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="utils" />
+              <option name="myItemId" value="quest" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -4055,6 +3556,70 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="quest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Quest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QuestGradle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Quest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QuestGradle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -4095,8 +3660,86 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="android-map-utils" />
+              <option name="myItemId" value="quest" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quest" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Quest" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quest" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quest" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fragment" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Quest" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quest" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quest" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fragment" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quest_list" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Quest" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quest" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quest" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="activity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -4112,6 +3755,8 @@
     <property name="FullScreen" value="false" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="06d8f311" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="Nexus_5_API_22_x86" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RunManager" selected="Android Application.quest">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -4325,7 +3970,7 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39977852" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890365" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890365" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -4362,7 +4007,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="4" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -4463,6 +4110,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.38831615">
           <caret line="769" column="20" selection-start-line="769" selection-start-column="20" selection-end-line="769" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -4470,21 +4118,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.048109967">
           <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/quest/src/main/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.072164945">
-          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/quest/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38487974">
-          <caret line="16" column="50" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
           <folding />
         </state>
       </provider>
@@ -4500,51 +4133,18 @@
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="6" column="49" selection-start-line="6" selection-start-column="49" selection-end-line="6" selection-end-column="49" />
+          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="android-designer">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/quest/src/main/java/com/android/androiddevteam/quest/database/DataAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/quest/src/main/java/com/android/androiddevteam/quest/fragment/FragBaseAbstract.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/quest/src/main/java/com/android/androiddevteam/quest/activity/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.14583333">
           <caret line="6" column="51" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/quest/src/main/java/com/android/androiddevteam/quest/structure/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.7688985">
-          <caret line="39" column="27" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/quest/src/main/java/com/android/androiddevteam/quest/activity/BaseAbstractFragmentActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7938144">
-          <caret line="33" column="63" selection-start-line="33" selection-start-column="63" selection-end-line="33" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/quest/src/main/java/com/android/androiddevteam/quest/fragment/quest_list/FragAllQuests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19243987">
-          <caret line="8" column="52" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="52" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -4556,18 +4156,117 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/androidMapUtils/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45704466">
+          <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/quest/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.14432989">
           <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/androidMapUtils/build.gradle">
+    <entry file="file://$PROJECT_DIR$/quest/src/main/res/values/styles.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12027492">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.072164945">
+          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quest/src/main/java/com/android/androiddevteam/quest/fragment/quest_list/FragQuest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29209623">
+          <caret line="99" column="33" selection-start-line="99" selection-start-column="33" selection-end-line="99" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quest/src/main/res/layout/action_bar_act_main.xml">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quest/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2646048">
+          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quest/src/main/java/com/android/androiddevteam/quest/fragment/FragBaseAbstract.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5051546">
+          <caret line="52" column="53" selection-start-line="52" selection-start-column="53" selection-end-line="52" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quest/src/main/java/com/android/androiddevteam/quest/activity/ActNewQuest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="47" column="28" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quest/src/main/java/com/android/androiddevteam/quest/fragment/quest_list/FragAllQuests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="250" column="31" selection-start-line="250" selection-start-column="31" selection-end-line="250" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quest/src/main/java/com/android/androiddevteam/quest/database/DataBaseHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="43" column="16" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quest/src/main/java/com/android/androiddevteam/quest/structure/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quest/src/main/java/com/android/androiddevteam/quest/database/DataAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="42" column="23" selection-start-line="42" selection-start-column="23" selection-end-line="42" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quest/src/main/java/com/android/androiddevteam/quest/activity/BaseAbstractFragmentActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.0927835">
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
           <folding />
         </state>
       </provider>

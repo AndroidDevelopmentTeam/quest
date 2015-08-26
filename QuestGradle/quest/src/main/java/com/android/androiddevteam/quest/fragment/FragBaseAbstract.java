@@ -1,15 +1,14 @@
 package com.android.androiddevteam.quest.fragment;
 
-import android.app.ActionBar;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import com.android.androiddevteam.quest.R;
 import com.android.androiddevteam.quest.activity.MainActivity;
 
 /**
@@ -64,8 +63,8 @@ public abstract class FragBaseAbstract extends Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = LayoutInflater.from(getActivity()).inflate(getRootLayoutId(), null, false);
         setClickListeners(rootView);
-        if (getActivity().getActionBar() != null){
-            customizeActionBar(getActivity().getActionBar());
+        if (((AppCompatActivity) getActivity()).getSupportActionBar() != null){
+            customizeActionBar(((AppCompatActivity) getActivity()).getSupportActionBar());
         }
         customizeViews(rootView);
 

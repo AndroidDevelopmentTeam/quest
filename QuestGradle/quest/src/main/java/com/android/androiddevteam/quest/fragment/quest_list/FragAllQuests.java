@@ -1,12 +1,12 @@
 package com.android.androiddevteam.quest.fragment.quest_list;
 
-import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.app.ActionBar;
 import android.view.View;
 import android.widget.*;
 import com.android.androiddevteam.quest.R;
@@ -223,7 +223,8 @@ public class FragAllQuests extends FragBaseAbstract
             case Activity.RESULT_OK:
                 switch (requestCode){
                     case REQUEST_CODES.CLEAR_DATABASE:
-                        clearCreateDB();
+                        clearDB();
+                        ((SimpleCursorAdapter) questsListView.getAdapter()).notifyDataSetChanged();
                         break;
                     default:
                         break;
@@ -234,11 +235,20 @@ public class FragAllQuests extends FragBaseAbstract
         }
     }
 
-    private void clearCreateDB(){
+    private void createDB(){
         DataBaseHelper dataBaseHelper = new DataBaseHelper(getActivity());
         try {
             dataBaseHelper.createDataBase();
             dataBaseHelper.openDataBase();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void clearDB(){
+        DataBaseHelper dataBaseHelper = new DataBaseHelper(getActivity());
+        try {
+            dataBaseHelper.clearDataBase();
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -1,13 +1,11 @@
 package com.android.androiddevteam.quest.fragment.quest_list;
 
-import android.app.ActionBar;
 import android.graphics.drawable.BitmapDrawable;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v7.app.ActionBar;
 import android.view.View;
 import android.widget.TextView;
+
 import com.android.androiddevteam.quest.R;
 import com.android.androiddevteam.quest.activity.MainActivity;
 import com.android.androiddevteam.quest.constants.BUNDLE;
@@ -96,7 +94,7 @@ public class FragQuest extends FragBaseAbstract {
                 textView.setCompoundDrawablePadding(MainActivity.getDefaultAppPaddingInt());
 
                 byte[] blob = getArguments().getByteArray(BUNDLE.BYTE_ARRAY.QUEST_AVATAR);
-                if (blob.length > 1){
+                if (blob != null && blob.length > 1){
                     textView.setCompoundDrawablesWithIntrinsicBounds(
                             new BitmapDrawable(getResources(), BitmapUtilities.byteArrayToBitmap(blob)),
                             null,

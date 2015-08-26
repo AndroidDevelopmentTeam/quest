@@ -3,6 +3,8 @@ package com.android.androiddevteam.quest.activity;
 import android.app.ActionBar;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.support.v7.app.AppCompatActivity;
+
 import com.android.androiddevteam.quest.R;
 import com.android.androiddevteam.quest.structure.App;
 import com.android.androiddevteam.quest.fragment.FragBaseAbstract;
@@ -13,7 +15,7 @@ import com.android.androiddevteam.quest.fragment.FragBaseAbstract;
  * Date: 04.08.15
  */
 
-public abstract class BaseAbstractFragmentActivity extends FragmentActivity{
+public abstract class BaseAbstractFragmentActivity extends AppCompatActivity{
 
     private static final int DEFAULT_APP_PADDING_ID = R.dimen.marginPadding;
 
