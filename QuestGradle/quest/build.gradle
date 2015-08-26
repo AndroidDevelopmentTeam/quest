@@ -20,7 +20,7 @@ android {
 
 dependencies {
     compile project(':utils')
-    compile project(':androidmapsutils2')
+    compile project(':android-map-utils')
     compile 'com.google.android.gms:play-services:7.8.0'
     compile 'com.android.support:support-v4:23.0.0'
     compile 'com.android.support:appcompat-v7:23.0.0'

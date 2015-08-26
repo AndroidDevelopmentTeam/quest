@@ -9,7 +9,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/androidmapsutils2" />
+            <option value="$PROJECT_DIR$/androidMapUtils" />
             <option value="$PROJECT_DIR$/quest" />
             <option value="$PROJECT_DIR$/utils" />
           </set>
