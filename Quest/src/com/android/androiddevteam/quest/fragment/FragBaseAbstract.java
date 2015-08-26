@@ -102,4 +102,8 @@ public abstract class FragBaseAbstract extends Fragment{
     protected int getIntFromCursor(Cursor cursor, String columnName){
         return cursor.getInt(cursor.getColumnIndex(columnName));
     }
+
+    protected byte[] getBlobFromCursor(Cursor cursor, String columnName){
+        return cursor.getBlob(cursor.getColumnIndex(columnName));
+    }
 }

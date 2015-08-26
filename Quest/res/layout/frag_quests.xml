@@ -1,24 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<android.support.design.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        xmlns:android="http://schemas.android.com/apk/res/android">
-    <android.support.v4.widget.SwipeRefreshLayout
-            android:id="@+id/swipe_refresh_new_quest"
+        android:layout_height="match_parent">
+    <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/swipe_refresh_new_quest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
             <ListView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:id="@+id/listView_quests_list"/>
+        </android.support.v4.widget.SwipeRefreshLayout>
 
-    </android.support.v4.widget.SwipeRefreshLayout>
-    <com.android.zeus.ui.floating_button.FloatingActionButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_action_new"
-            android:id="@+id/floatButton_new_quest" android:layout_gravity="bottom|right"
-            android:layout_marginRight="@dimen/marginPadding" android:layout_marginBottom="@dimen/marginPadding"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"/>
+        <android.support.design.widget.FloatingActionButton
+                android:id="@+id/floatButton_new_quest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_action_new"
+                android:layout_gravity="bottom|end">
+            </android.support.design.widget.FloatingActionButton>
+
 </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>
+
+        <!--android:src="@drawable/ic_action_new"-->
+        <!--android:id="@+id/floatButton_new_quest"-->
+        <!--android:layout_gravity="bottom|right"-->
+        <!--android:layout_marginRight="@dimen/marginPadding"-->
+        <!--android:layout_marginBottom="@dimen/marginPadding"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignParentRight="true"-->

@@ -1,5 +1,6 @@
 package com.android.androiddevteam.quest.activity;
 
+import android.app.ActionBar;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import com.android.androiddevteam.quest.R;
@@ -42,7 +43,15 @@ public abstract class BaseAbstractFragmentActivity extends FragmentActivity{
         }
 
         additionalCustomization();
+
+        customizeActionBar(getActionBar());
     }
+
+    protected abstract int getContentViewId();
+
+    protected abstract void additionalCustomization();
+
+    protected abstract void customizeActionBar(ActionBar actionBar);
 
     @Override
     protected void onResume() {
@@ -93,12 +102,6 @@ public abstract class BaseAbstractFragmentActivity extends FragmentActivity{
         return DEFAULT_APP_PADDING_INT;
     }
 
-    protected abstract int getFragmentContainerId();
-
-    protected abstract int getContentViewId();
-
-    protected abstract void additionalCustomization();
-
     public DataAdapter getDataAdapter() {
         return dataAdapter;
     }
@@ -126,4 +129,6 @@ public abstract class BaseAbstractFragmentActivity extends FragmentActivity{
                 .addToBackStack(fragment.getTag())
                 .commit();
     }
+
+    protected abstract int getFragmentContainerId();
 }

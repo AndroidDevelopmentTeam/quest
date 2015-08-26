@@ -13,7 +13,6 @@ import android.widget.*;
 import com.android.androiddevteam.quest.R;
 import com.android.androiddevteam.quest.activity.ActNewQuest;
 import com.android.androiddevteam.quest.activity.BaseAbstractFragmentActivity;
-import com.android.androiddevteam.quest.adapter.CustomSimpleCursorAdapter;
 import com.android.androiddevteam.quest.adapter.binder.QuestItemBinder;
 import com.android.androiddevteam.quest.constants.BUNDLE;
 import com.android.androiddevteam.quest.constants.REQUEST_CODES;
@@ -21,6 +20,7 @@ import com.android.androiddevteam.quest.database.DataAdapter;
 import com.android.androiddevteam.quest.database.DataBaseHelper;
 import com.android.androiddevteam.quest.dialogfragments.dialog_ok_cancel.DlgFragClearDatabase;
 import com.android.androiddevteam.quest.fragment.FragBaseAbstract;
+import com.android.zeus.bitmaputilities.BitmapUtilities;
 import com.android.zeus.ui.floating_button.FloatingActionButton;
 import com.android.zeus.ui.floating_button.ShowHideOnScroll;
 
@@ -44,6 +44,7 @@ public class FragAllQuests extends FragBaseAbstract
     private static final int SWIPE_REFRESH_LIST_ID = R.id.swipe_refresh_new_quest;
     private static final int ITEM_LAYOUT_ID = R.layout.adapter_item_quest;
     private static final int QUEST_NAME_AVATAR_ID = R.id.textView_quest_item_name;
+    private static final int DEFAULT_QUEST_DRAWABLE = R.drawable.ic_action_place;
 
     private static final String TAG = "FragAllQuests";
     private static final String TITLE = "All quests";
@@ -130,35 +131,23 @@ public class FragAllQuests extends FragBaseAbstract
                 android.R.color.holo_orange_light,
                 android.R.color.holo_red_light);
 
-        FloatingActionButton floatingActionButton = ((FloatingActionButton) rootView.findViewById(NEW_QUEST_ID));
-        floatingActionButton.setColor(Color.WHITE);
-        floatingActionButton.setSize(FloatingActionButton.SIZE_NORMAL);
-        floatingActionButton.initBackground();
+//        FloatingActionButton floatingActionButton = ((FloatingActionButton) rootView.findViewById(NEW_QUEST_ID));
+//        floatingActionButton.setColor(Color.WHITE);
+//        floatingActionButton.setSize(FloatingActionButton.SIZE_NORMAL);
+//        floatingActionButton.initBackground();
 
         questsListView.setAdapter(getAdapter());
-        ShowHideOnScroll showHideOnScroll = new ShowHideOnScroll(floatingActionButton);
-        questsListView.setOnTouchListener(showHideOnScroll);
+//        ShowHideOnScroll showHideOnScroll = new ShowHideOnScroll(floatingActionButton);
+//        questsListView.setOnTouchListener(showHideOnScroll);
     }
 
     private BaseAdapter getAdapter(){
-        CustomSimpleCursorAdapter cursorAdapter = new CustomSimpleCursorAdapter(getActivity(),
+        SimpleCursorAdapter cursorAdapter = new SimpleCursorAdapter(getActivity(),
                 ITEM_LAYOUT_ID,
                 ((BaseAbstractFragmentActivity) getActivity()).getDataAdapter().getQuests(),
                 new String[]{DataAdapter.QUEST_NAME_STRING, DataAdapter.QUEST_AVATAR_BLOB},
                 new int[]{QUEST_NAME_AVATAR_ID, QUEST_NAME_AVATAR_ID},
                 CursorAdapter.FLAG_REGISTER_CONTENT_OBSERVER);
-
-//        List<QuestItem> questItems = new ArrayList<>();
-//        for (int i = 0; i < DEF_QUEST_ITEMS_COUNT; ++i){
-//            QuestItem questItem = new QuestItem("Quest #" + (i + DEF_QUEST_ITEMS_COUNT), DEF_QUEST_DRAWABLE_ID);
-//            questItem.setTime(Long.valueOf(System.nanoTime()).toString());
-//            questItem.setDate(Integer.valueOf(Calendar.getInstance().getTime().getDate()).toString());
-//            questItem.setCreator("#" + (i + DEF_QUEST_ITEMS_COUNT));
-//            questItem.setPrize(Integer.valueOf((i + DEF_QUEST_ITEMS_COUNT)).toString());
-//
-//            questItems.add(questItem);
-//        }
-//        return new ListAdapterAllQuests(getActivity(), questItems);
 
         cursorAdapter.setViewBinder(new QuestItemBinder(getActivity()));
 
@@ -191,13 +180,21 @@ public class FragAllQuests extends FragBaseAbstract
                 getStringFromCursor(itemCursor, DataAdapter.QUEST_DATE_STRING));
         bundle.putString(BUNDLE.STRING.QUEST_CREATOR,
                 getStringFromCursor(itemCursor, DataAdapter.QUEST_CREATOR_STRING));
-        bundle.putString(BUNDLE.STRING.QUEST_PRIZE, getStringFromCursor(itemCursor,
-                DataAdapter.QUEST_PRIZE_STRING));
+        bundle.putString(BUNDLE.STRING.QUEST_PRIZE,
+                getStringFromCursor(itemCursor, DataAdapter.QUEST_PRIZE_STRING));
 
-        itemCursor.close();
+        byte[] blob = getBlobFromCursor(itemCursor, DataAdapter.QUEST_AVATAR_BLOB);
+        if (blob.length <= 1){
+            blob = BitmapUtilities.drawableToByteArray(
+                    getActivity().getResources().getDrawable(DEFAULT_QUEST_DRAWABLE));
+        }
+        bundle.putByteArray(BUNDLE.BYTE_ARRAY.QUEST_AVATAR, blob);
+
 
         FragQuest fragQuest = new FragQuest();
         fragQuest.setArguments(bundle);
+
+        itemCursor.close();
 
         replaceFragmentBackStack(fragQuest);
     }

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <fragment
+            android:id="@+id/google_map"
+            android:name="com.google.android.gms.maps.MapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="false"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentRight="false"
+            android:layout_alignParentTop="false"
+            class="com.google.android.gms.maps.MapFragment" />
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText_new_quest_search"
+            android:layout_marginLeft="@dimen/marginPadding"
+            android:layout_marginTop="@dimen/marginPadding"
+            android:drawableRight="@drawable/ic_action_search" android:hint="Search"
+            android:background="@drawable/layer_list_def_white" android:paddingLeft="@dimen/marginPadding"
+            android:layout_marginBottom="@dimen/marginPadding"
+            android:focusable="false" android:layout_marginRight="@dimen/marginPadding"/>
+    <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton_new_quest_curr_loc"
+            android:layout_alignParentBottom="false"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/marginPadding"
+            android:layout_marginBottom="@dimen/marginPadding"
+            android:background="@drawable/selector_switch_thumb"
+            android:src="@drawable/ic_action_location_found" android:layout_below="@+id/editText_new_quest_search"/>
+    <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content"
+                 android:id="@+id/imageButton_new_quest_switch_map" android:layout_alignParentBottom="false"
+                 android:layout_alignParentRight="true" android:layout_marginRight="@dimen/marginPadding"
+                 android:layout_marginBottom="@dimen/marginPadding"
+                 android:background="@drawable/selector_switch_thumb"
+                 android:src="@drawable/ic_action_web_site"
+                 android:layout_below="@+id/imageButton_new_quest_curr_loc"/>
+    <SlidingDrawer
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:handle="@+id/relativeLayout_handle"
+            android:content="@+id/linearLayout_content" android:visibility="gone"
+            android:id="@+id/slidingDrawer_pointsList">
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/relativeLayout_handle" android:gravity="center_horizontal"
+                android:padding="@dimen/marginPadding" android:background="@drawable/layer_list_def_white">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Start point"
+                    android:id="@+id/textView_startPoint"
+                    android:drawableLeft="@drawable/ic_action_place"
+                    android:layout_marginBottom="@dimen/marginPadding" android:gravity="center_vertical"/>
+            <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dividerHeight"
+                    android:background="@android:color/black"
+                    android:layout_marginBottom="@dimen/marginPadding" android:layout_alignParentLeft="false"
+                    android:layout_alignParentTop="false"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/marginPadding"
+                    android:layout_toLeftOf="@+id/textView_main_distance"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="[start-end distance]"
+                    android:id="@+id/textView_main_distance" android:layout_alignParentLeft="false"
+                    android:layout_alignParentTop="false"
+                    android:layout_centerVertical="true" android:layout_alignParentRight="true"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Finish Point"
+                    android:id="@+id/textView_finishPoint"
+                    android:drawableLeft="@drawable/ic_action_place"
+                    android:layout_below="@+id/textView_startPoint" android:gravity="center_vertical"/>
+        </RelativeLayout>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/linearLayout_content"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/marginPadding"
+                android:background="@drawable/layer_list_def_white">
+            <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/listView_points" android:divider="@android:color/transparent">
+            </ListView>
+        </LinearLayout>
+    </SlidingDrawer>
+</RelativeLayout>
