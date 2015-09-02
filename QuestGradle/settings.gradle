@@ -1,3 +1,0 @@
-include ':utils', ':android-map-utils'
-include ':quest'
-project(':android-map-utils').projectDir = new File('androidMapUtils')
