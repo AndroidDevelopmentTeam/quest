@@ -26,9 +26,9 @@
             android:layout_marginRight="@dimen/marginPadding"
             android:layout_marginBottom="@dimen/marginPadding"
             app:layout_anchor="@id/listView_quests_list"
-            app:layout_anchorGravity="bottom|right|end">
+            app:layout_anchorGravity="bottom|right|end"
+            app:layout_behavior="com.android.priadko.ui.behavior.ScrollAwareFABBehavior">
         </android.support.design.widget.FloatingActionButton>
     </android.support.design.widget.CoordinatorLayout>
 </RelativeLayout>
 
-    <!--app:layout_behavior="com.android.zeus.ui.behavior.ScrollAwareFABBehavior"-->
