@@ -36,14 +36,14 @@ public class ListAdapterAllPoints extends BaseAdapter{
 
 
     private List<PointItem> items;
+    private List<String> distances;
     private Context context;
 
-    private int diff = 0;
-//    private int maxDiff = 0;
 
-    public ListAdapterAllPoints(Context context, List<PointItem> items) {
+    public ListAdapterAllPoints(Context context, List<PointItem> items, List<String> distances) {
         this.context = context;
         this.items = items;
+        this.distances = distances;
     }
 
     /**
@@ -99,27 +99,31 @@ public class ListAdapterAllPoints extends BaseAdapter{
      */
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        if(position == 0){
-            diff = 0;
-        }
+        int diff = 0;
         if ((position % MOD) == REMAINDER_FOR_POINT){
             convertView = LayoutInflater.from(context).inflate(POINT_ITEM_LAYOUT_ID, null, false);
-                populatePointView(convertView, items.get(diff));
+
+            diff = position / 2;
+            position = position - diff;
+
+            populatePointView(convertView, position);
+
         } else {
             convertView = LayoutInflater.from(context).inflate(DISTANCE_ITEM_LAYOUT_ID, null, false);
-            diff++;
-            if (position == 1){
-                populateDistanceView(convertView, position + 1);
-            } else {
-                populateDistanceView(convertView, position);
-            }
+
+            diff = position / 2;
+            position = position - diff - 1;
+
+            populateDistanceView(convertView, position);
         }
 
         return convertView;
     }
 
-    private void populatePointView(View convertView, PointItem pointItem){
+    private void populatePointView(View convertView, int currentPosition){
         TextView pointNameAvatar = ((TextView) convertView.findViewById(POINT_ITEM_POINT_NAME_ID));
+
+        PointItem pointItem = items.get(currentPosition);
 
         pointNameAvatar.setText(pointItem.getPointName());
         pointNameAvatar.setTextColor(pointItem.getPointColor());
@@ -138,15 +142,9 @@ public class ListAdapterAllPoints extends BaseAdapter{
         pointPosition.setTextColor(pointItem.getPointColor());
     }
 
-    private void populateDistanceView(View convertView, int currentPosition){
-        GoogleMapManager.distanceBetweenPointsString(items.get(currentPosition - diff - 1).getPointPosition(),
-                items.get(currentPosition - diff).getPointPosition());
-
+    private void populateDistanceView(View convertView, int currentPosition) {
         ((TextView) convertView.findViewById(DISTANCE_ITEM_DISTANCE_ID))
-                .setText(GoogleMapManager
-                        .distanceBetweenPointsString(
-                                items.get(currentPosition - diff - 1).getPointPosition(),
-                                items.get(currentPosition - diff).getPointPosition()));
+                .setText(distances.get(currentPosition));
 
 //        convertView.findViewById(DISTANCE_ITEM_DIVIDER_ID)
 //                .setBackgroundColor(items.get(currentPosition - diff).getPointColor());
