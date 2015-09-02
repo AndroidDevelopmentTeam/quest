@@ -1,0 +1,69 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+* .idea/
+* .idea/.name
+* .idea/compiler.xml
+* .idea/copyright/
+* .idea/copyright/profiles_settings.xml
+* .idea/misc.xml
+* .idea/modules.xml
+* .idea/vcs.xml
+* .idea/workspace.xml
+* AndroidManifest.xml~
+* ant.properties
+* build.xml
+* out/
+* out/production/
+* out/production/utils/
+* out/production/utils/com/
+* out/production/utils/com/android/
+* out/production/utils/com/android/priadko/
+* out/production/utils/com/android/priadko/AndroidUtils/
+* out/production/utils/com/android/priadko/AndroidUtils/BuildConfig.class
+* out/production/utils/com/android/priadko/AndroidUtils/R$attr.class
+* out/production/utils/com/android/priadko/AndroidUtils/R$drawable.class
+* out/production/utils/com/android/priadko/AndroidUtils/R$layout.class
+* out/production/utils/com/android/priadko/AndroidUtils/R$string.class
+* out/production/utils/com/android/priadko/AndroidUtils/R.class
+* out/production/utils/com/android/priadko/bitmaputilities/
+* out/production/utils/com/android/priadko/bitmaputilities/BitmapUtilities.class
+* out/production/utils/com/android/priadko/roundedBitmapAsDrawable/
+* out/production/utils/com/android/priadko/roundedBitmapAsDrawable/RoundedDrawable.class
+* out/production/utils/com/android/priadko/ui/
+* out/production/utils/com/android/priadko/ui/adapter/
+* out/production/utils/com/android/priadko/ui/adapter/SpinnerAdapterNothingSelected.class
+* out/production/utils/com/android/priadko/ui/customtypeface/
+* out/production/utils/com/android/priadko/ui/customtypeface/FontsOverride.class
+* proguard-project.txt
+* utils.iml
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+* AndroidManifest.xml => app/src/main/AndroidManifest.xml
+* res/ => app/src/main/res/
+* src/ => app/src/main/java/
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)

@@ -37,7 +37,9 @@ public class App extends Application{
             dataAdapter = new DataAdapter(appContext);
         }
 
+        dataAdapter.createDatabase();
         dataAdapter.open();
+
         return dataAdapter;
     }
 }

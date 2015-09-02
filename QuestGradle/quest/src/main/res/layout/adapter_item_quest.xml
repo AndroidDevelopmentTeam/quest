@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="horizontal"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:padding="@dimen/marginPadding"
-              android:gravity="center_vertical">
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:padding="@dimen/marginPadding"
+    android:layout_margin="@dimen/marginPadding">
     <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="[QuestName]"
-            android:id="@+id/textView_quest_item_name"
-            android:gravity="center_vertical"/>
-</LinearLayout>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="[QuestName]"
+        android:id="@+id/textView_quest_item_name"
+        android:gravity="center_vertical"
+        android:layout_margin="@dimen/marginPadding"/>
+    </android.support.v7.widget.CardView>

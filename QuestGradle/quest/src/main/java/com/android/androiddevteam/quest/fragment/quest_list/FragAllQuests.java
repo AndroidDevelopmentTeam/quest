@@ -8,7 +8,14 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.ActionBar;
 import android.view.View;
-import android.widget.*;
+import android.widget.AdapterView;
+import android.widget.BaseAdapter;
+import android.widget.CursorAdapter;
+import android.widget.ListView;
+import android.widget.SimpleCursorAdapter;
+import android.widget.TextView;
+import android.widget.Toast;
+
 import com.android.androiddevteam.quest.R;
 import com.android.androiddevteam.quest.activity.ActNewQuest;
 import com.android.androiddevteam.quest.adapter.binder.QuestItemBinder;
@@ -256,6 +263,8 @@ public class FragAllQuests extends FragBaseAbstract
 
     @Override
     public void onRefresh() {
+        ((SimpleCursorAdapter) questsListView.getAdapter()).notifyDataSetChanged();
         Toast.makeText(getActivity(), REFRESH_MESSAGE, Toast.LENGTH_LONG).show();
+        swipeRefreshLayout.setRefreshing(false);
     }
 }
