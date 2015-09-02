@@ -55,6 +55,7 @@ public class ActNewQuest extends BaseAbstractFragmentActivity
 
     private GoogleMapManager googleMapManager;
     private List<PointItem> points;
+    private List<String> distances;
     private int mainDistance = 0;
 
     @Override
@@ -104,7 +105,8 @@ public class ActNewQuest extends BaseAbstractFragmentActivity
         findViewById(SWITCH_MAP_TYPE_ID).setOnClickListener(this);
 
         points = new ArrayList<>();
-        ListAdapterAllPoints adapterAllPoints = new ListAdapterAllPoints(this, points);
+        distances = new ArrayList<>();
+        ListAdapterAllPoints adapterAllPoints = new ListAdapterAllPoints(this, points, distances);
         ((ListView) findViewById(POINTS_LIST_ID)).setAdapter(adapterAllPoints);
     }
 
@@ -123,10 +125,12 @@ public class ActNewQuest extends BaseAbstractFragmentActivity
     public void addPointToList(PointItem pointItem){
         points.add(pointItem);
 
-        if (points.size() > 1){
-            mainDistance
-                    += GoogleMapManager.distanceBetweenPointsInt(points.get(START_POINT_INDEX).getPointPosition(),
-                    pointItem.getPointPosition());
+        if (points.size() > 1) {
+//            mainDistance
+//                    += GoogleMapManager.distanceBetweenPointsInt(points.get(START_POINT_INDEX).getPointPosition(),
+//                    pointItem.getPointPosition());
+
+            calculateAndAddDistance();
         }
 
         setMainDistance();
@@ -205,5 +209,19 @@ public class ActNewQuest extends BaseAbstractFragmentActivity
             default:
                 break;
         }
+    }
+
+    private void calculateAndAddDistance() {
+        int size = points.size();
+
+        mainDistance += GoogleMapManager.distanceBetweenPointsInt(
+                points.get(size - 2).getPointPosition(),
+                points.get(size - 1).getPointPosition());
+
+        String distance = GoogleMapManager.distanceBetweenPointsString(
+                points.get(size - 2).getPointPosition(),
+                points.get(size - 1).getPointPosition());
+
+        distances.add(distance);
     }
 }
