@@ -1,14 +1,15 @@
 package com.androiddevteam.quest.adapter;
 
 import android.content.Context;
+import android.graphics.Point;
 import android.graphics.drawable.BitmapDrawable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 import com.androiddevteam.quest.R;
-import com.androiddevteam.quest.google_map.GoogleMapManager;
 import com.androiddevteam.quest.structure.PointItem;
 
 import java.util.List;
@@ -31,19 +32,24 @@ public class ListAdapterAllPoints extends BaseAdapter{
     private static final int DISTANCE_ITEM_DISTANCE_ID = R.id.textView_dist_item_distance;
     private static final int DISTANCE_ITEM_DIVIDER_ID = R.id.view_dist_item_divider;
 
+    private static final int VIEW_TYPE_POINT = 0;
+    private static final int VIEW_TYPE_DISTANCE = 1;
+
     private static final int MOD = 2;
     private static final int REMAINDER_FOR_POINT = 0;
 
 
     private List<PointItem> items;
+    private List<String> distances;
     private Context context;
+    private LayoutInflater layoutInflater;
 
-    private int diff = 0;
-//    private int maxDiff = 0;
 
-    public ListAdapterAllPoints(Context context, List<PointItem> items) {
+    public ListAdapterAllPoints(Context context, List<PointItem> items, List<String> distances) {
         this.context = context;
         this.items = items;
+        this.distances = distances;
+        this.layoutInflater = ((LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE));
     }
 
     /**
@@ -79,6 +85,11 @@ public class ListAdapterAllPoints extends BaseAdapter{
         return 0;
     }
 
+    @Override
+    public int getItemViewType(int position) {
+        return (position % MOD) == REMAINDER_FOR_POINT ? VIEW_TYPE_POINT : VIEW_TYPE_DISTANCE;
+    }
+
     /**
      * Get a View that displays the data at the specified position in the data set. You can either
      * create a View manually or inflate it from an XML layout file. When the View is inflated, the
@@ -99,56 +110,89 @@ public class ListAdapterAllPoints extends BaseAdapter{
      */
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        if(position == 0){
-            diff = 0;
-        }
-        if ((position % MOD) == REMAINDER_FOR_POINT){
-            convertView = LayoutInflater.from(context).inflate(POINT_ITEM_LAYOUT_ID, null, false);
-                populatePointView(convertView, items.get(diff));
-        } else {
-            convertView = LayoutInflater.from(context).inflate(DISTANCE_ITEM_LAYOUT_ID, null, false);
-            diff++;
-            if (position == 1){
-                populateDistanceView(convertView, position + 1);
-            } else {
-                populateDistanceView(convertView, position);
-            }
+        int diff = 0;
+        int type = getItemViewType(position);
+        if (type == VIEW_TYPE_POINT) {
+            diff = position / 2;
+            position = position - diff;
+
+            convertView = populatePointView(convertView, parent, position);
+        } else if (type == VIEW_TYPE_DISTANCE) {
+            diff = position / 2;
+            position = position - diff - 1;
+
+            convertView = populateDistanceView(convertView, parent, position);
         }
 
         return convertView;
     }
 
-    private void populatePointView(View convertView, PointItem pointItem){
-        TextView pointNameAvatar = ((TextView) convertView.findViewById(POINT_ITEM_POINT_NAME_ID));
+    // using ViewHolder pattern to recycle views and optimize ListView scrolling
+    private View populatePointView(View convertView, ViewGroup parent, int currentPosition) {
+        View view = convertView;
+        PointViewHolder holder = null;
 
-        pointNameAvatar.setText(pointItem.getPointName());
-        pointNameAvatar.setTextColor(pointItem.getPointColor());
+        if (view == null || !(view.getTag() instanceof PointViewHolder)) {
+            view = layoutInflater.inflate(POINT_ITEM_LAYOUT_ID, parent, false);
+            holder = new PointViewHolder();
+
+            holder.name = (TextView) view.findViewById(POINT_ITEM_POINT_NAME_ID);
+            holder.position = (TextView) view.findViewById(POINT_ITEM_POINT_POSITION_ID);
+            view.setTag(holder);
+        } else {
+            holder = (PointViewHolder) view.getTag();
+        }
+
+        PointItem pointItem = items.get(currentPosition);
+
+        holder.name.setText(pointItem.getPointName());
+        holder.name.setTextColor(pointItem.getPointColor());
 //        pointNameAvatar.setCompoundDrawablePadding(
 //                Float.valueOf(context.getResources().getDimension(MainActivity.DEFAULT_APP_PADDING)).intValue());
         if (pointItem.getPointAvatarBitmap() != null){
-            pointNameAvatar.setCompoundDrawablesWithIntrinsicBounds(
+            holder.name.setCompoundDrawablesWithIntrinsicBounds(
                     new BitmapDrawable(context.getResources(), pointItem.getPointAvatarBitmap()),
                     null,
                     null,
                     null);
         }
 
-        TextView pointPosition = ((TextView) convertView.findViewById(POINT_ITEM_POINT_POSITION_ID));
-        pointPosition.setText(pointItem.getPointPosition().toString());
-        pointPosition.setTextColor(pointItem.getPointColor());
+        holder.position.setText(pointItem.getPointPosition().toString());
+        holder.position.setTextColor(pointItem.getPointColor());
+
+        return view;
     }
 
-    private void populateDistanceView(View convertView, int currentPosition){
-        GoogleMapManager.distanceBetweenPointsString(items.get(currentPosition - diff - 1).getPointPosition(),
-                items.get(currentPosition - diff).getPointPosition());
+    // using ViewHolder pattern to recycle views and optimize ListView scrolling
+    private View populateDistanceView(View convertView, ViewGroup parent, int currentPosition) {
+        View view = convertView;
+        DistanceViewHolder holder = null;
 
-        ((TextView) convertView.findViewById(DISTANCE_ITEM_DISTANCE_ID))
-                .setText(GoogleMapManager
-                        .distanceBetweenPointsString(
-                                items.get(currentPosition - diff - 1).getPointPosition(),
-                                items.get(currentPosition - diff).getPointPosition()));
+        if (view == null || !(view.getTag() instanceof DistanceViewHolder)) {
+            view = layoutInflater.inflate(DISTANCE_ITEM_LAYOUT_ID, parent, false);
+            holder = new DistanceViewHolder();
+
+            holder.name = (TextView) view.findViewById(DISTANCE_ITEM_DISTANCE_ID);
+            view.setTag(holder);
+        } else {
+            holder = (DistanceViewHolder) view.getTag();
+        }
+
+        holder.name.setText(distances.get(currentPosition));
 
 //        convertView.findViewById(DISTANCE_ITEM_DIVIDER_ID)
 //                .setBackgroundColor(items.get(currentPosition - diff).getPointColor());
+
+        return view;
+    }
+
+    // base class for ViewHolder pattern
+    class PointViewHolder {
+        TextView name;
+        TextView position;
+    }
+
+    class DistanceViewHolder {
+        TextView name;
     }
 }
