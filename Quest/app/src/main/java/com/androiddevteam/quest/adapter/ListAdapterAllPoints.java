@@ -1,7 +1,9 @@
 package com.androiddevteam.quest.adapter;
 
 import android.content.Context;
+import android.graphics.Point;
 import android.graphics.drawable.BitmapDrawable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,6 +31,9 @@ public class ListAdapterAllPoints extends BaseAdapter{
     private static final int DISTANCE_ITEM_LAYOUT_ID = R.layout.adapter_item_distance;
     private static final int DISTANCE_ITEM_DISTANCE_ID = R.id.textView_dist_item_distance;
     private static final int DISTANCE_ITEM_DIVIDER_ID = R.id.view_dist_item_divider;
+
+    private static final int VIEW_TYPE_POINT = 0;
+    private static final int VIEW_TYPE_DISTANCE = 1;
 
     private static final int MOD = 2;
     private static final int REMAINDER_FOR_POINT = 0;
@@ -80,6 +85,11 @@ public class ListAdapterAllPoints extends BaseAdapter{
         return 0;
     }
 
+    @Override
+    public int getItemViewType(int position) {
+        return (position % MOD) == REMAINDER_FOR_POINT ? VIEW_TYPE_POINT : VIEW_TYPE_DISTANCE;
+    }
+
     /**
      * Get a View that displays the data at the specified position in the data set. You can either
      * create a View manually or inflate it from an XML layout file. When the View is inflated, the
@@ -101,12 +111,13 @@ public class ListAdapterAllPoints extends BaseAdapter{
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         int diff = 0;
-        if ((position % MOD) == REMAINDER_FOR_POINT){
+        int type = getItemViewType(position);
+        if (type == VIEW_TYPE_POINT) {
             diff = position / 2;
             position = position - diff;
 
             convertView = populatePointView(convertView, parent, position);
-        } else {
+        } else if (type == VIEW_TYPE_DISTANCE) {
             diff = position / 2;
             position = position - diff - 1;
 
@@ -119,17 +130,17 @@ public class ListAdapterAllPoints extends BaseAdapter{
     // using ViewHolder pattern to recycle views and optimize ListView scrolling
     private View populatePointView(View convertView, ViewGroup parent, int currentPosition) {
         View view = convertView;
-        ViewHolder holder = null;
+        PointViewHolder holder = null;
 
-        if (view == null) {
+        if (view == null || !(view.getTag() instanceof PointViewHolder)) {
             view = layoutInflater.inflate(POINT_ITEM_LAYOUT_ID, parent, false);
-            holder = new ViewHolder();
+            holder = new PointViewHolder();
 
             holder.name = (TextView) view.findViewById(POINT_ITEM_POINT_NAME_ID);
             holder.position = (TextView) view.findViewById(POINT_ITEM_POINT_POSITION_ID);
             view.setTag(holder);
         } else {
-            holder = (ViewHolder) view.getTag();
+            holder = (PointViewHolder) view.getTag();
         }
 
         PointItem pointItem = items.get(currentPosition);
@@ -155,16 +166,16 @@ public class ListAdapterAllPoints extends BaseAdapter{
     // using ViewHolder pattern to recycle views and optimize ListView scrolling
     private View populateDistanceView(View convertView, ViewGroup parent, int currentPosition) {
         View view = convertView;
-        ViewHolder holder = null;
+        DistanceViewHolder holder = null;
 
-        if (view == null) {
+        if (view == null || !(view.getTag() instanceof DistanceViewHolder)) {
             view = layoutInflater.inflate(DISTANCE_ITEM_LAYOUT_ID, parent, false);
-            holder = new ViewHolder();
+            holder = new DistanceViewHolder();
 
             holder.name = (TextView) view.findViewById(DISTANCE_ITEM_DISTANCE_ID);
             view.setTag(holder);
         } else {
-            holder = (ViewHolder) view.getTag();
+            holder = (DistanceViewHolder) view.getTag();
         }
 
         holder.name.setText(distances.get(currentPosition));
@@ -176,8 +187,12 @@ public class ListAdapterAllPoints extends BaseAdapter{
     }
 
     // base class for ViewHolder pattern
-    class ViewHolder {
+    class PointViewHolder {
         TextView name;
         TextView position;
+    }
+
+    class DistanceViewHolder {
+        TextView name;
     }
 }
